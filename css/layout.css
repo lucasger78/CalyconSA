@@ -246,13 +246,13 @@ fieldset[disabled] .btn-theme {
 }
 
 .btn-white-brd:hover, .btn-white-brd:focus, .btn-white-brd.focus {
-  color: #515769;
+  color: #1975b7;
   background: #fff;
   border-color: transparent;
 }
 
 .btn-default-bg {
-  color: #515769;
+  color: #1975b7;
   background: #f3f4f5;
   border-color: transparent;
   border-width: 0;
@@ -260,20 +260,20 @@ fieldset[disabled] .btn-theme {
 
 .btn-default-bg:hover, .btn-default-bg:focus, .btn-default-bg.focus {
   color: #fff;
-  background: #17bed2;
+  background: #515769;
   border-color: transparent;
 }
 
 .btn-base-bg {
   color: #fff;
-  background: #17bed2;
+  background: #515769;
   border-color: transparent;
   border-width: 0;
 }
 
 .btn-base-bg:hover, .btn-base-bg:focus, .btn-base-bg.focus {
   color: #fff;
-  background: #63cbd7;
+  background: #515769;
   border-color: transparent;
 }
 
