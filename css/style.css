@@ -1,0 +1,131 @@
+
+/* #flags{
+	float: right;
+} */
+
+.flags{
+	width: 12.5em;
+	height:4.25em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position:fixed;right:10px;
+	padding-right: 70px; 
+	padding-top: 20px;
+	justify-self: right;
+	
+}
+
+.flags-ar{	
+	filter: grayscale(100%);
+	transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+		
+}
+
+.flags-ar:hover{
+	filter: grayscale(0%);
+	transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+
+.flags-br{
+	filter: grayscale(100%);
+	transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+		
+}
+
+.flags-br:hover{
+	filter: grayscale(0%);
+	transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+
+.flags-gb{
+	filter: grayscale(100%);
+	transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+		
+}
+
+.flags-gb:hover{
+	filter: grayscale(0%);
+	transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+
+.flags_items{
+	width: 30px;
+	height: 20px;
+		
+}
+
+.flags_img{
+	/* display: block; */
+	cursor: pointer;
+	
+}
+
+/* .boton{
+	text-transform: uppercase;
+	font-weight: bold;
+
+}
+
+.boton-1{
+	text-transform: uppercase;
+	font-weight: bold;
+	color:  #E04343;
+
+}
+
+.title-red{
+	font-size: xx-large;
+	font-weight: bolder;
+	color:  #E04343;
+	text-transform: uppercase
+}
+
+.title-red-1{
+	font-size: x-large;
+	font-weight: bolder;
+	color:  #E04343;
+	text-transform: uppercase
+}
+
+.title-black{
+	font-size: x-large;
+	font-weight: bolder;
+	text-transform: uppercase
+	
+}
+
+.contenido-about{
+	font-size: large;
+	font-weight: lighter;
+	color:  #ffffff;
+} */
+
+
+
+
+
