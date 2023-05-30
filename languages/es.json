@@ -1,0 +1,51 @@
+{
+   
+      "nav": {
+        "index": "Inicio",
+        "about": "Quiénes Somos",
+        "services": "Servicios",
+        "contact": "Contacto",
+        "curriculum": "Currículum",
+        "cotizar": "Cotizar"
+      },
+      "slider": {
+        "titulo-1": "Diseñamos y Adaptamos cada Solución",
+        "parrafo-1": "Diseñamos y adaptamos cada solución a la necesidad de nuestros clientes.",
+        "titulo-2": "Soluciones Estratégicas",
+        "parrafo-2": "Brinadamos Soluciones Estratégicas a nuestros clientes llevando tranquilidad al negocio de cada uno de ellos."
+      },
+      "ventajas": {
+        "titulo-ventaja": "Nuestras Ventajas",
+        "ventaja-1": "Amplia Experiencia",
+        "parrafo-ventaja-1": "Poseemos una amplia experiencia en el rubro de las terminales automotrices y también en actividades para sus proveedores.",
+        "ventaja-2": "Diseñamos y Adaptamos cada Solución",
+        "parrafo-ventaja-2": "Diseñamos y adaptamos cada solución a la necesidad de nuestros clientes.",
+        "ventaja-3": "Respuestas Inmediatas",
+        "parrafo-ventaja-3": "Nuestra política tiene por objetivo dar una respuesta inmediata a nuestros clientes.",
+        "ventaja-4": "Soluciones Estratégicas",
+        "parrafo-ventaja-4": "Brinadamos Soluciones Estratégicas a nuestros clientes llevando tranquilidad al negocio de cada uno de ellos.",
+        "ventaja-5": "Sede Propia en Brasil",
+        "parrafo-ventaja-5": "Contamos con sede propia en Brasil, lo que facilita y agiliza procesos admin. y operativos de nuestros clientes tanto de la Región como de Europa."
+      },      
+      "work": {
+        "btn-conozcamejor": "conozcanos mejor",
+        "trabajo-titulo": "Trabajando...",
+        "trabajo-parrafo": "Mediante una dedicación constante y esfuerzo incansable, construimos nuestra trayectoria profesional, enfrentando desafíos y alcanzando logros que nos acercan progresivamente a nuestras metas laborales."
+      },
+      "footer-menu": {
+        "index-footer": "Inicio",
+        "about-footer": "Quiénes Somos",
+        "services-footer": "Servicios",
+        "contact-footer": "Contacto"
+      },
+      "about": {
+        "about-titulo-1": "Sobre Nosotros",
+        "about-parrafo-1": "Somos una Empresa de Servicios orientada a las áreas de calidad, logística, ingeniería, tecnología y mantenimiento de diversas empresas. Diseñamos y adaptamos cada Solución, a la necesidad de nuestros Clientes.",
+        "about-titulo-2": "Nosotros",
+        "about-parrafo-2": "Calycon S.A. de la mano de sus Socios, fue fundada en la provincia de Córdoba, Argentina en el año 2014. Poseemos una amplia experiencia en el rubro de las terminales automotrices y también en actividades para sus proveedores de autopartes, tanto en el tratamiento de material no conforme, como su recuperación y re acondicionamiento, brindando todos los servicios logísticos de soporte para dar una atención integral a cada necesidad.",
+        "about-parrafo-3": "Para tal efecto, contamos también con sede propia en Brasil, lo que nos permite facilitar y agilizar los procesos administrativos y operativos de nuestros Clientes, tanto de la Región como de Europa.",
+        "btn-volver-inicio": "volver a inicio"
+      }
+      
+    }
+ 

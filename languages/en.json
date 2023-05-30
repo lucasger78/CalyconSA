@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "index": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact",
+    "curriculum": "Curriculum",
+    "cotizar": "Quote"
+  },
+  "slider": {
+    "titulo-1": "Designing and Tailoring Every Solution",
+    "parrafo-1": "We design and tailor every solution to meet the needs of our clients.",
+    "titulo-2": "Strategic Solutions",
+    "parrafo-2": "We provide strategic solutions to our clients, bringing peace of mind to their businesses."
+  },
+  "ventajas": {
+    "titulo-ventaja": "Our Advantages",
+    "ventaja-1": "Extensive Experience",
+    "parrafo-ventaja-1": "We have extensive experience in the automotive terminal industry as well as activities for their suppliers.",
+    "ventaja-2": "Designing and Tailoring Every Solution",
+    "parrafo-ventaja-2": "We design and tailor every solution to meet the needs of our clients.",
+    "ventaja-3": "Immediate Responses",
+    "parrafo-ventaja-3": "Our policy aims to provide an immediate response to our clients.",
+    "ventaja-4": "Strategic Solutions",
+    "parrafo-ventaja-4": "We provide strategic solutions to our clients, bringing peace of mind to their businesses.",
+    "ventaja-5": "Own Headquarters in Brazil",
+    "parrafo-ventaja-5": "We have our own headquarters in Brazil, which facilitates and streamlines administrative and operational processes for our clients in both the region and Europe."
+  },
+  "work": {
+    "btn-conozcamejor": "Learn More About Us",
+    "trabajo-titulo": "Working...",
+    "trabajo-parrafo": "Through constant dedication and relentless effort, we build our professional path, facing challenges and achieving milestones that progressively bring us closer to our career goals."
+  },
+  "footer-menu": {
+    "index-footer": "Home",
+    "about-footer": "About Us",
+    "services-footer": "Services",
+    "contact-footer": "Contact"
+  },
+  "about": {
+    "about-titulo-1": "About Us",
+    "about-parrafo-1": "We are a Service Company focused on quality, logistics, engineering, technology, and maintenance areas for various businesses. We design and adapt each solution to our clients' needs.",
+    "about-titulo-2": "Our Story",
+    "about-parrafo-2": "Calycon S.A., led by its partners, was founded in the province of Córdoba, Argentina, in 2014. We have extensive experience in the automotive terminal industry and activities for their parts suppliers. We handle non-conforming material treatment, recovery, and reconditioning, providing comprehensive logistic support services to meet every need.",
+    "about-parrafo-3": "Additionally, we have our own headquarters in Brazil, allowing us to facilitate and streamline administrative and operational processes for our clients in both the region and Europe.",
+    "btn-volver-inicio": "Back to Home"
+  }
+ 
+}
