@@ -1,21 +1,50 @@
 // // FLAGS
 
+// const flags = document.querySelectorAll(".flags-ar, .flags-br, .flags-gb");
 
-// const flags= document.querySelectorAll('.flags');
+// flags.forEach((flag) => {
+//   flag.addEventListener("click", () => {
+//     // Eliminar la clase "hovered" de todos los elementos
+//     flags.forEach((flag) => flag.classList.remove("hovered"));
+//     // Agregar la clase "hovered" al elemento seleccionado
+//     flag.classList.add("hovered");
 
-// // Recorre cada elemento y agrega un evento de clic
-// flags.forEach(flag => {
-// 	flag.addEventListener('click', () => {
-// 		// Remueve la clase 'active' de todos los elementos
-// 		flags.forEach(f => f.classList.remove('active'));
-
-// 		// Agrega la clase 'active' solo al elemento actual
-// 		flag.classList.add('active');
-// 	});
+//   });
 // });
 
-const flags = document.getElementById('flags');
+const flags = document.querySelectorAll(".flags-ar, .flags-br, .flags-gb");
 
-flags.addEventListener('click', function() {
-  this.focus();
+const selectFlag = (flag) => {
+  // Eliminar la clase "hovered" de todos los elementos
+  flags.forEach((flag) => flag.classList.remove("hovered"));
+  // Agregar la clase "hovered" al elemento seleccionado
+  flag.classList.add("hovered");
+
+  // Almacenar la selección de la bandera en el almacenamiento local del navegador
+  localStorage.setItem("selectedFlag", flag.dataset.language);
+};
+
+const loadFlag = () => {
+  // Obtener la bandera seleccionada almacenada en el almacenamiento local del navegador
+  const selectedFlag = localStorage.getItem("selectedFlag");
+
+  if (selectedFlag) {
+    // Buscar el elemento de bandera correspondiente a la selección almacenada
+    const flagElement = document.querySelector(`[data-language="${selectedFlag}"]`);
+    if (flagElement) {
+      flagElement.classList.add("hovered");
+    }
+  }
+};
+
+flags.forEach((flag) => {
+  flag.addEventListener("click", () => {
+    selectFlag(flag);
+  });
 });
+
+// Cargar la bandera al cargar la página
+loadFlag();
+
+
+

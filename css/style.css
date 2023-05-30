@@ -18,39 +18,27 @@
 
 .flags-ar,
 .flags-br,
-.flags-gb{	
-	filter: grayscale(100%);
-	transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-ms-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	
-		
+.flags-gb {	
+  filter: grayscale(100%);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
 }
 
+.flags-ar.hovered,
+.flags-br.hovered,
+.flags-gb.hovered,
 .flags-ar:hover,
 .flags-br:hover,
-.flags-gb:hover,
-.flags-ar:focus,
-.flags-br:focus,
-.flags-gb:focus{
-	filter: grayscale(0%);
-	transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-ms-transition: all 0.3s;
-	-o-transition: all 0.3s;
-}
-
-.flags-ar.active,
-.flags-br.active,
-.flags-gb.active {
-	filter: grayscale(0%);
-}
-
-.flags.active {
-	filter: grayscale(0%);
+.flags-gb:hover {
+  filter: grayscale(0%);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
 }
 
 .flags_items{

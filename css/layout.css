@@ -982,7 +982,7 @@ fieldset[disabled] .btn-theme {
 }
 
 .carousel-title {
-  font-size: 80px;
+  font-size: 70px;
   font-weight: 700;
   color: #fff;
   line-height: 1.1;
@@ -991,7 +991,7 @@ fieldset[disabled] .btn-theme {
 
 @media (max-width: 768px) {
   .carousel-title {
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 
