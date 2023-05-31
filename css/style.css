@@ -181,5 +181,14 @@ li {
 	font-size: small;
 }
 
+/* REDES CONTACT */
+.logo-red {
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-red:hover {
+    transform: translateY(-15px);
+  }
 
-
+  
+  
