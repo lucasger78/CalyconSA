@@ -77,6 +77,26 @@
 
 /* END VIDEO MODAL */
 
+/* PARRAFOS ABOUT*/
+
+.parrafo-responsive {
+  max-width: 100%;
+   width: auto;
+}
+
+@media screen and (min-width: 1100px) {
+  .parrafo-responsive {
+    max-width: 1100px;;
+  }
+}
+
+.parrafo-angosto{
+  max-width: 87%;
+}
+
+
+/* FIN PARRAFOS ABOUT */
+
  /* CARRUSEL */
 
  #carrusel {
