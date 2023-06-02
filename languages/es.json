@@ -14,6 +14,10 @@
         "titulo-2": "Soluciones Estratégicas",
         "parrafo-2": "Brinadamos Soluciones Estratégicas a nuestros clientes llevando tranquilidad al negocio de cada uno de ellos."
       },
+      "btn-sup": {
+        "whatsapp": "Comercial",
+        "cv": "Trabajá con Nosotros"       
+      },
       "ventajas": {
         "titulo-ventaja": "Nuestras Ventajas",
         "ventaja-1": "Amplia Experiencia",
@@ -149,7 +153,6 @@
       "curriculum-parrafo-7": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "curriculum-parrafo-7b": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "curriculum-titulo-7": ", Operario de Control"
-      
     } 
     
 }

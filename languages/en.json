@@ -13,6 +13,10 @@
     "titulo-2": "Strategic Solutions",
     "parrafo-2": "We provide strategic solutions to our clients, bringing peace of mind to their businesses."
   },
+  "btn-sup": {
+    "whatsapp": "Commercial",
+    "cv": "Work with Us"   
+  },
   "ventajas": {
     "titulo-ventaja": "Our Advantages",
     "ventaja-1": "Extensive Experience",
@@ -146,6 +150,7 @@
       "curriculum-parrafo-7": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
       "curriculum-parrafo-7b": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "curriculum-titulo-7": ", Control Operator"
+      
 }
  
 }
