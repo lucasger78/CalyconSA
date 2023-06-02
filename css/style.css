@@ -74,9 +74,13 @@
   }
 
   .fixed-action-btn {
+    /* position: fixed;
+    bottom: 50px;
+    left: -5px;
+    z-index: 999; */
     position: fixed;
     bottom: 50px;
-    left: 0px;
+    left: -5px;
     z-index: 999;
   }
   
@@ -92,7 +96,7 @@
   .fixed-action-btn .slider {
     position: absolute;
     bottom: 0;
-    left: 40px;
+    left: 90px;
     background-color: #25d366;
     color: #fff;
     padding: 8px;
@@ -136,28 +140,32 @@
 
 /* TRABAJÁ CON NOSOTROS */
 
+
+
 .cv {
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:105px;
-	left:40px;
-	background-color:#195ec5;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-	font-size:30px;
-	z-index:100;
-  }
-  
-  .icon-cv {
-	margin-top:13px;
-  }
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 105px;
+  left: 40px;
+  background-color: #195ec5;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 100;
+}
+
+
+
+.icon-cv {
+  margin-top: 13px;
+}
 
 .fixed-action-btn-cv {
   position: fixed;
   bottom: 120px;
-  left: 0px;
+  left: -5px;
   z-index: 999;
 }
 
@@ -166,14 +174,14 @@
   transition: all 0.3s ease;
 }
 
-.fixed-action-btn-cv .whatsapp-btn-cv:hover {
-  width: 100px;
+.fixed-action-btn-cv:hover .whatsapp-btn-cv {
+  width: 100%;
 }
 
 .fixed-action-btn-cv .slider-cv {
-  position: absolute;
+  position: absolute;         
   bottom: 0;
-  left: 40px;
+  left: 90px;
   background-color: #195ec5;
   color: #fff;
   padding: 8px;
@@ -183,6 +191,7 @@
   opacity: 0;
   white-space: nowrap;
   text-transform: uppercase;
+  
 }
 
 .fixed-action-btn-cv:hover .slider-cv {
@@ -195,8 +204,8 @@
 }
 
 .btn-floating-cv {
-  width: 56px;
-  height: 56px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -212,6 +221,8 @@
   height: 64px;
   font-size: 24px;
 }
+
+
 
 /* END TRABAJÁ CON NOSOTROS */ 
 
