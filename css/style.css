@@ -73,11 +73,7 @@
 	margin-top:13px;
   }
 
-  .fixed-action-btn {
-    /* position: fixed;
-    bottom: 50px;
-    left: -5px;
-    z-index: 999; */
+  .fixed-action-btn {  
     position: fixed;
     bottom: 50px;
     left: -5px;
@@ -138,9 +134,8 @@
 
 /* END WHATSAPP */ 
 
+
 /* TRABAJÁ CON NOSOTROS */
-
-
 
 .cv {
   position: fixed;
@@ -148,15 +143,13 @@
   height: 60px;
   bottom: 105px;
   left: 40px;
-  background-color: #195ec5;
+  background-color: #1975b7;
   color: #fff;
   border-radius: 50px;
   text-align: center;
   font-size: 30px;
   z-index: 100;
 }
-
-
 
 .icon-cv {
   margin-top: 13px;
@@ -182,7 +175,7 @@
   position: absolute;         
   bottom: 0;
   left: 90px;
-  background-color: #195ec5;
+  background-color: #1975b7;
   color: #fff;
   padding: 8px;
   border-top-right-radius: 8px;
@@ -222,9 +215,8 @@
   font-size: 24px;
 }
 
-
-
 /* END TRABAJÁ CON NOSOTROS */ 
+
 
 /* PARRAFOS ABOUT*/
 
@@ -328,7 +320,7 @@ li {
     height: 5px;
     font-size: 1px;
     border-radius: 100%;
-	opacity: 0.5;
+	  opacity: 0.5;
 }
 
 #carrusel>.menu li a:hover {
@@ -348,6 +340,7 @@ li {
 .footer-name {
 	text-transform: uppercase;
 	font-size: small;
+  color: #1975b7;
 }
 
 /* REDES CONTACT */
@@ -359,9 +352,24 @@ li {
     transform: translateY(-15px);
   }
 
+  .cv-footer{
+    justify-content: space-between;
+    align-self: center;
+    position: relative;
+  }
+
+  .cv-footer-all{
+    justify-content: space-between;
+    justify-items: left;
+    align-items: left;
+  }
  
 
 
+/* TEXTOS TRABAJÁ CON NOSTROS */
 
+.cv-text{
+  max-width: 80%;
+}
   
 	
