@@ -377,10 +377,44 @@ li {
 	height: 6.25em;
 	display: flex;
 	align-items: center;	
-	position:fixed;left: 700px;
+	position:fixed;left: 350px;
 	padding-left: 70px; 
 	padding-top: 15px;
 	justify-self: center;
+}
+
+
+.logo-container {
+  /* display: flex; */
+  /* align-items: center; */
+  max-height: 150px;
+}
+
+/* Alinea el logo y el objeto iso-logo en la versión de escritorio */
+.brand.logo {
+  order: 1;
+}
+
+.iso-logo {
+  order: 2;
+}
+
+/* Acomoda el objeto iso-logo en la versión móvil */
+@media (max-width: 767px) {
+  .logo-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .brand.logo {
+    order: 2;
+    margin-bottom: 10px; /* Ajusta el margen inferior según tus necesidades */
+  }
+
+  .iso-logo {
+    order: 1;
+    margin-left: 20px; /* Ajusta el margen izquierdo según tus necesidades */
+  }
 }
 
 
