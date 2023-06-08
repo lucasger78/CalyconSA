@@ -385,39 +385,39 @@ li {
 
 
 /* .logo-container {
-  /* display: flex; */
-  /* align-items: center; */
-  /* max-height: 150px; */
-/* } */ 
+  display: flex;
+  align-items: center; 
+  max-height: 150px;
+}  */
 
 /* Alinea el logo y el objeto iso-logo en la versión de escritorio */
-/* .brand.logo {
+.brand.logo {
   order: 1;
-} */
+}
 
-/* .iso-logo {
+.iso-logo {
   order: 2;
-} */
+}
 
 /* Acomoda el objeto iso-logo en la versión móvil */
-/* @media (max-width: 767px) {
+@media (max-width: 767px) {
   .logo-container {
     flex-direction: column;
     align-items: flex-start;
-  } */
+  }
 
   /* Ajusta el margen inferior según tus necesidades */
-  /* .brand.logo {
+  .brand.logo {
     order: 2;
     margin-bottom: 10px; 
-  } */
+  }
 
   /* Ajusta el margen izquierdo según tus necesidades */
-  /* .iso-logo {
+  .iso-logo {
     order: 1;
     margin-left: 20px; 
   }
-} */
+}
 
 
 
