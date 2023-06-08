@@ -377,7 +377,7 @@ li {
   width: 10em;
 	height: 6.25em;
 	display: flex;
-  position:fixed;left:400px; max-height: 450px;
+  position:fixed;left:410px; max-height: 130px; max-width: 30;
 	padding-right: 70px; 
 	padding-top: 5px;
   padding-bottom: 10px;
