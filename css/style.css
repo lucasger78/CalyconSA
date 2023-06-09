@@ -373,20 +373,55 @@ li {
 }
 
 
-.iso-logo{
+/* .iso-logo{
   width: 9em;
 	height: 5.8em;
 	display: flex;
-  position:fixed;left:390px; max-height: 90px; max-width: 30;
+  position:fixed;left:30px; max-height: 90px; max-width: 30;
 	padding-right: 70px; 
 	padding-top: 5px;
   padding-bottom: 10px;
 	justify-self: right;
-	/* align-items: center;	 */
-	/* position:fixed;left: 5px;
-	padding-left: 70px; 
-	padding-top: 15px;
-	justify-self: center;*/
-} 
-/* @media (max-height: 600px) {
+  transition: opacity 0.3s ease;
+}  */
+
+/* .iso-logo {
+  width: 9em;
+  height: 5.8em;
+  display: flex;
+  position: sticky;
+  top: 90px; 
+  padding-right: 70px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  justify-self: right;
+  transition: opacity 0.3s ease; 
 } */
+
+.iso-logo {
+  width: 9em;
+  height: 5.8em;
+  display: flex;
+  position:fixed;left:30px; max-height: 90px; max-width: 30;
+  top: 100px; /* Ajusta el valor según la altura de tu menú de navegación */
+  padding-right: 70px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  justify-self: right;
+  opacity: 1;
+  transition: opacity 0.8s ease, transform 0.8s ease; 
+  transform: translateY(0);
+}
+
+.iso-logo.hidden {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .navbar-collapse.show ~ .iso-logo {
+    opacity: 0; /* Ocultar el elemento cuando el menú está desplegado en la versión móvil */
+    transform: translateY(-100%);
+  }
+}
+
+

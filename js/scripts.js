@@ -46,5 +46,51 @@ flags.forEach((flag) => {
 // Cargar la bandera al cargar la página
 loadFlag();
 
+//LOGO NORMAS ISO
+// let prevScrollPos = window.pageYOffset; // Variable para almacenar la posición de desplazamiento anterior
+
+// window.addEventListener('scroll', function() {
+//   let currentScrollPos = window.pageYOffset; // Obtener la posición de desplazamiento actual
+//   let logo = document.querySelector('.iso-logo');
+
+//   if (currentScrollPos > prevScrollPos) {
+//     // Desplazamiento hacia abajo
+//     logo.classList.add('hidden');
+//   } else {
+//     // Desplazamiento hacia arriba
+//     logo.classList.remove('hidden');
+//   }
+
+//   prevScrollPos = currentScrollPos; // Actualizar la posición de desplazamiento anterior
+// });
+
+let prevScrollPos = window.pageYOffset; // Variable para almacenar la posición de desplazamiento anterior
+
+window.addEventListener('scroll', function() {
+  let currentScrollPos = window.pageYOffset; // Obtener la posición de desplazamiento actual
+  let logo = document.querySelector('.iso-logo');
+  let navbarCollapse = document.querySelector('.navbar-collapse');
+
+  if (currentScrollPos > prevScrollPos || navbarCollapse.classList.contains('show')) {
+    // Desplazamiento hacia abajo o menú desplegado en versión móvil
+    logo.style.opacity = '0'; // Ocultar el elemento cambiando la opacidad a 0
+  } else {
+    // Desplazamiento hacia arriba
+    logo.style.opacity = '1'; // Mostrar el elemento cambiando la opacidad a 1
+  }
+
+  prevScrollPos = currentScrollPos; // Actualizar la posición de desplazamiento anterior
+});
+
+//OCULTAR CUANDO DESPLIEGA MENU EN MOBILE
+let navbarToggle = document.querySelector('.navbar-toggler');
+let logo = document.querySelector('.iso-logo');
+
+navbarToggle.addEventListener('click', function() {
+  if (window.innerWidth <= 767) {
+    logo.classList.toggle('hidden'); // Alternar la visibilidad del elemento en la versión móvil cuando se hace clic en el botón de alternar
+  }
+});
+
 
 
