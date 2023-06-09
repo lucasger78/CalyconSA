@@ -1,17 +1,5 @@
 // // FLAGS
 
-// const flags = document.querySelectorAll(".flags-ar, .flags-br, .flags-gb");
-
-// flags.forEach((flag) => {
-//   flag.addEventListener("click", () => {
-//     // Eliminar la clase "hovered" de todos los elementos
-//     flags.forEach((flag) => flag.classList.remove("hovered"));
-//     // Agregar la clase "hovered" al elemento seleccionado
-//     flag.classList.add("hovered");
-
-//   });
-// });
-
 const flags = document.querySelectorAll(".flags-ar, .flags-br, .flags-gb");
 
 const selectFlag = (flag) => {
@@ -47,22 +35,7 @@ flags.forEach((flag) => {
 loadFlag();
 
 //LOGO NORMAS ISO
-// let prevScrollPos = window.pageYOffset; // Variable para almacenar la posición de desplazamiento anterior
 
-// window.addEventListener('scroll', function() {
-//   let currentScrollPos = window.pageYOffset; // Obtener la posición de desplazamiento actual
-//   let logo = document.querySelector('.iso-logo');
-
-//   if (currentScrollPos > prevScrollPos) {
-//     // Desplazamiento hacia abajo
-//     logo.classList.add('hidden');
-//   } else {
-//     // Desplazamiento hacia arriba
-//     logo.classList.remove('hidden');
-//   }
-
-//   prevScrollPos = currentScrollPos; // Actualizar la posición de desplazamiento anterior
-// });
 
 let prevScrollPos = window.pageYOffset; // Variable para almacenar la posición de desplazamiento anterior
 
@@ -82,15 +55,12 @@ window.addEventListener('scroll', function() {
   prevScrollPos = currentScrollPos; // Actualizar la posición de desplazamiento anterior
 });
 
-//OCULTAR CUANDO DESPLIEGA MENU EN MOBILE
-let navbarToggle = document.querySelector('.navbar-toggler');
-let logo = document.querySelector('.iso-logo');
 
-navbarToggle.addEventListener('click', function() {
-  if (window.innerWidth <= 767) {
-    logo.classList.toggle('hidden'); // Alternar la visibilidad del elemento en la versión móvil cuando se hace clic en el botón de alternar
-  }
-});
+
+
+
+
+
 
 
 
