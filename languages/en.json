@@ -55,6 +55,17 @@
     "about-parrafo-6": "Our company's vision is to be an organization with a strong presence in industrial plants, commerce, government entities, etc. recognized for our quality of service, reliability, and responsibility towards our clients.",
     "btn-volver-inicio": "Back to Home"
   },
+  "valores": {
+    "titulo-valor": "Our Values",
+    "valor-1": "Quality",
+    "parrafo-valor-1": "Implementing the appropriate operational solutions to meet the needs of our clients, providing a service oriented towards continuous improvement in all our activities.",
+    "valor-2": "Reliability",
+    "parrafo-valor-2": "Creating a clear and transparent vision for our clients throughout the entire service process.",
+    "valor-3": "Responsibility",
+    "parrafo-valor-3": "We consider the fulfillment of our services in accordance with the established agreements and regulatory framework of our activity as highly important.",
+    "valor-4": "Ethics and Respect",
+    "parrafo-valor-4": "All our activities are primarily based on ethical management of service outsourcing and respect for the client and all parties involved in the provided service."
+    },
   "basicsservices": {
       "servicio-titulo": "Services",  
       "servicio-titulo-parrafo": "We provide specialized labor outsourcing services tailored to the operational, logistical, and commercial needs of our clients.",  
@@ -67,7 +78,7 @@
       "basico-3": "Integrated Logistics Processes",
       "basico-parrafo-3": "We offer inventory stock service in warehouses and goods reception. Our process includes facility assembly or transshipment to deliver for future production from storage and logistics.",
       "basico-4": "Fixed Antennas and Logistics Residents",
-      "basico-parrafo-4": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor",
+      "basico-parrafo-4": "Preventive and corrective activity of the parts supplied for the manufacturing of vehicles, machinery, and components. Representing companies globally.",
       "basico-5": "Goods Reception and Control",
       "basico-parrafo-5": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor",
       "basico-6": "Material Transfers and Modulation",

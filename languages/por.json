@@ -54,6 +54,17 @@
     "about-parrafo-6": "A visão da nossa empresa é ser uma organização com forte presença em plantas industriais, comércio, órgãos governamentais, etc. reconhecida pela qualidade dos nossos serviços, confiabilidade e responsabilidade para com os nossos clientes.",
     "btn-volver-inicio": "Voltar para o Início"
   },
+  "valores": {
+    "titulo-valor": "Nossos Valores",
+    "valor-1": "Qualidade",
+    "parrafo-valor-1": "Implementar as soluções operacionais adequadas às necessidades de nossos clientes, fornecendo um serviço voltado para a melhoria contínua em todas as nossas atividades.",
+    "valor-2": "Confiabilidade",
+    "parrafo-valor-2": "Gerar nos nossos clientes uma visão clara e transparente de todo o processo de serviço prestado.",
+    "valor-3": "Responsabilidade",
+    "parrafo-valor-3": "Consideramos o cumprimento de nossos serviços de acordo com os acordos estabelecidos e o quadro regulamentar de nossa atividade como extremamente importante.",
+    "valor-4": "Ética e Respeito",
+    "parrafo-valor-4": "Todas as nossas atividades são primariamente baseadas na gestão ética da terceirização de serviços e no respeito ao cliente e a todas as partes envolvidas no serviço prestado."
+  },
   "basicsservices": {
     "servicio-titulo": "Serviços",
     "servicio-titulo-parrafo": "Fornecemos serviços de terceirização de mão de obra especializada em tarefas operacionais, logísticas e comerciais, de acordo com as necessidades específicas de nossos clientes.",
@@ -66,7 +77,7 @@
     "basico-3": "Processos de Logística Integrada",
     "basico-parrafo-3": "Oferecemos serviço de inventário de estoque em armazéns e recebimento de mercadorias. Nosso processo inclui montagem de instalações ou transferência para entrega posterior à produção a partir do armazenamento e logística.",
     "basico-4": "Antenas Fixas e Residentes Logísticos",
-    "basico-parrafo-4": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor",
+    "basico-parrafo-4": "Atividade preventiva e corretiva das peças fornecidas para a fabricação de veículos, máquinas e componentes. Representando empresas em nível global.",
     "basico-5": "Recepção e Controle de Mercadorias",
     "basico-parrafo-5": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor",
     "basico-6": "Transferências e Modulação de Materiais",
