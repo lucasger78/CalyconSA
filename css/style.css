@@ -1,8 +1,4 @@
 
-/* #flags{
-	float: right;
-} */
-
 .flags{
 	width: 12.5em;
 	height:4.25em;
@@ -48,7 +44,7 @@
 }
 
 .flags_img{
-	/* display: block; */
+	
 	cursor: pointer;
 	
 }
@@ -134,6 +130,10 @@
 
 /* END WHATSAPP */ 
 
+.btn-doble{
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* TRABAJÁ CON NOSOTROS */
 
@@ -222,7 +222,7 @@
 
 .parrafo-responsive {
   max-width: 100%;
-   width: auto;
+  width: auto;
 }
 
 @media screen and (min-width: 1100px) {
@@ -265,12 +265,7 @@ li {
 }
 
 .clients{
-	
-	/* justify-items: center; */
-	/* padding: 10px; */
-    /* left: 50%;
-    top: 100px; */
-    transform: translate(-10%, -10%);
+  transform: translate(-10%, -10%);
 }
 
 #carrusel>ul.slider li {
@@ -292,12 +287,12 @@ li {
 
 #carrusel>ul.slider li:first-child {
     opacity: 1;
-    /*Mostramos el primer <li>*/
+    
 }
 
 #carrusel>ul.slider li:target {
     opacity: 1;
-    /*Mostramos el <li> del enlace que pulsemos*/
+   
 }
 
 #carrusel>.menu {
@@ -390,6 +385,9 @@ li {
   transform: translateY(0); 
 }
 
+.btn-back{
+  justify-content: center;
+}
 
 
 
