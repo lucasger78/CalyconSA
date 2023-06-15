@@ -389,74 +389,63 @@ li {
   justify-content: center;
 }
 
-/* Estilos generales para los carruseles */
-.swiper-clients {
-  margin-bottom: 20px;
+
+.swiper-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .swiper-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  animation: slide 40s linear infinite;
+  width: 2000%; 
+  transform: translateX(0%);
 }
 
 .swiper-slide {
-  text-align: center;
+  flex: 0 0 20%; 
+  padding: 10px;
 }
 
-.swiper-clients-img {
-  max-width: 100%;
+.swiper-slide img {
+  width: 100%;
   height: auto;
 }
 
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-320%); 
+  }
+}
+
 /* Estilos para la versión móvil */
-@media screen and (max-width: 767px) {
-  .swiper-clients-desktop {
-      display: none; /* Ocultar el carrusel de escritorio en versión móvil */
+@media (max-width: 768px) {
+  .swiper-slide img {
+    width: 115%; /* Ajusta el tamaño a tu preferencia */
   }
-
-  .swiper-clients-mobile {
-      display: block; /* Mostrar el carrusel móvil en versión móvil */
+  .swiper-slide {
+    flex: 0 0 30%; 
+    padding: 10px;
   }
-  
-  .swiper-clients-mobile .swiper-wrapper {
-      flex-wrap: wrap;
-  }
-  
-  .swiper-clients-mobile .swiper-slide {
-      width: 25%;
-      padding: 10px;
-  }
-}
-
-/* Estilos para la versión de escritorio */
-@media screen and (min-width: 768px) {
-  .swiper-clients-mobile {
-      display: none; /* Ocultar el carrusel móvil en versión de escritorio */
-  }
-
-  .swiper-clients-desktop {
-      display: block; /* Mostrar el carrusel de escritorio en versión de escritorio */
-  }
-  
-  .swiper-clients-desktop .swiper-wrapper {
-      flex-wrap: nowrap;
-  }
-  
-  .swiper-clients-desktop .swiper-slide {
-      width: auto;
-      padding: 0 15px;
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-550%); 
+    }
   }
 }
 
-.contact-row {
-  display: flex;
-  justify-content: space-between;
-}
 
-.contact-item {
-  flex-basis: 24%;
-}
+
+
+
+
 
 
 
