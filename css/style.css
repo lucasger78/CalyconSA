@@ -402,11 +402,13 @@ li {
   .contact-row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .contact-item {
-    flex-basis: 50%;
+    flex-basis: 48%;
     padding: 0 10px;
+    margin-bottom: 20px;
   }
 }
 
