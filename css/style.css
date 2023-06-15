@@ -389,6 +389,14 @@ li {
   justify-content: center;
 }
 
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-item {
+  flex-basis: 24%;
+}
 
 .swiper-container {
   display: flex;
