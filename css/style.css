@@ -389,6 +389,7 @@ li {
   justify-content: center;
 }
 
+/* contacto sedes */
 .contact-row {
   display: flex;
   justify-content: space-between;
@@ -398,6 +399,7 @@ li {
   flex-basis: 24%;
 }
 
+/* Estilos para la versión móvil */
 @media (max-width: 768px) {
   .contact-row {
     display: flex;
@@ -412,6 +414,10 @@ li {
   }
 }
 
+/* fin contacto sedes */
+
+
+/* carrusel logos */
 
 .swiper-container {
   display: flex;
@@ -448,7 +454,7 @@ li {
 /* Estilos para la versión móvil */
 @media (max-width: 768px) {
   .swiper-slide img {
-    width: 115%; /* Ajusta el tamaño a tu preferencia */
+    width: 115%;
   }
   .swiper-slide {
     flex: 0 0 30%; 
@@ -464,6 +470,7 @@ li {
   }
 }
 
+/* fin carrusel logos */
 
 
 
