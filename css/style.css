@@ -412,7 +412,18 @@ li {
     padding: 0 10px;
     margin-bottom: 20px;
   }
+
+  /* Ajuste adicional para alinear los elementos */
+  .contact-row:nth-child(2) .contact-item:nth-child(2n+1) {
+    margin-top: 20px;
+  }
+  
+  /* Ajuste para el primer elemento */
+  .contact-row:first-child .contact-item:first-child {
+    flex-basis: 100%;
+  }
 }
+
 
 /* fin contacto sedes */
 
