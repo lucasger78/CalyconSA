@@ -449,6 +449,14 @@ li {
   }
 }
 
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-item {
+  flex-basis: 24%;
+}
 
 
 
