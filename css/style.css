@@ -389,21 +389,64 @@ li {
   justify-content: center;
 }
 
-@media (max-width: 767px) {
-  .swiper-wrapper {
-    /* display: grid; */
-    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
-    grid-template-rows: repeat(4, 1fr); /* 4 filas */
+/* Estilos generales para los carruseles */
+.swiper-clients {
+  margin-bottom: 20px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide {
+  text-align: center;
+}
+
+.swiper-clients-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos para la versión móvil */
+@media screen and (max-width: 767px) {
+  .swiper-clients-desktop {
+      display: none; /* Ocultar el carrusel de escritorio en versión móvil */
+  }
+
+  .swiper-clients-mobile {
+      display: block; /* Mostrar el carrusel móvil en versión móvil */
+  }
+  
+  .swiper-clients-mobile .swiper-wrapper {
+      flex-wrap: wrap;
+  }
+  
+  .swiper-clients-mobile .swiper-slide {
+      width: 25%;
+      padding: 10px;
   }
 }
 
-.contact-row {
-  display: flex;
-  justify-content: space-between;
-}
+/* Estilos para la versión de escritorio */
+@media screen and (min-width: 768px) {
+  .swiper-clients-mobile {
+      display: none; /* Ocultar el carrusel móvil en versión de escritorio */
+  }
 
-.contact-item {
-  flex-basis: 24%;
+  .swiper-clients-desktop {
+      display: block; /* Mostrar el carrusel de escritorio en versión de escritorio */
+  }
+  
+  .swiper-clients-desktop .swiper-wrapper {
+      flex-wrap: nowrap;
+  }
+  
+  .swiper-clients-desktop .swiper-slide {
+      width: auto;
+      padding: 0 15px;
+  }
 }
 
 

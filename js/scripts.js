@@ -55,19 +55,28 @@ window.addEventListener('scroll', function() {
   prevScrollPos = currentScrollPos; // Actualizar la posición de desplazamiento anterior
 });
 
-let swiper = new Swiper('.swiper-clients', {
+// // Inicializar el carrusel de logos en móvil
+const swiperMobile = new Swiper('.swiper-clients-mobile', {
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+  },
+});
+
+// Inicializar el carrusel de logos en escritorio
+const swiperDesktop = new Swiper('.swiper-clients-desktop', {
   slidesPerView: 5,
   spaceBetween: 30,
   loop: true,
-  on: {
-      reachEnd: function () {
-          // Detener Swiper después de la quinta repetición
-          if (this.realIndex === this.slides.length - 1) {
-              this.loopDestroy();
-          }
-      }
-  }
 });
+
 
 
 
