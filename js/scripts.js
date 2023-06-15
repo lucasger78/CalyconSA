@@ -55,6 +55,20 @@ window.addEventListener('scroll', function() {
   prevScrollPos = currentScrollPos; // Actualizar la posición de desplazamiento anterior
 });
 
+let swiper = new Swiper('.swiper-clients', {
+  slidesPerView: 5,
+  spaceBetween: 30,
+  loop: true,
+  on: {
+      reachEnd: function () {
+          // Detener Swiper después de la quinta repetición
+          if (this.realIndex === this.slides.length - 1) {
+              this.loopDestroy();
+          }
+      }
+  }
+});
+
 
 
 
