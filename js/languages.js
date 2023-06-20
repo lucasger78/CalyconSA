@@ -34,3 +34,4 @@ flagsElement.addEventListener("click", (e) => {
 
 // Carga el idioma al cargar la página
 loadLanguage();
+
