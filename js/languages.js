@@ -35,3 +35,26 @@ flagsElement.addEventListener("click", (e) => {
 // Carga el idioma al cargar la página
 loadLanguage();
 
+// const loadLanguage = async () => {
+//   // Verificar si el idioma seleccionado ya está almacenado en el almacenamiento local del navegador
+//   const selectedLanguage = localStorage.getItem("selectedLanguage");
+
+//   if (selectedLanguage) {
+//     changeLanguage(selectedLanguage);
+//   } else {
+//     // Cargar el archivo "es.json" y almacenar su contenido en el almacenamiento local
+//     const response = await fetch("es.json");
+//     const languageData = await response.json();
+//     localStorage.setItem("selectedLanguage", JSON.stringify(languageData));
+//     changeLanguage(languageData);
+//   }
+// };
+
+// flagsElement.addEventListener("click", (e) => {
+//   changeLanguage(e.target.parentElement.dataset.language);
+// });
+
+// // Cargar el idioma al cargar la página
+// loadLanguage();
+
+
