@@ -2,7 +2,7 @@
   "nav": {
     "index": "Home",
     "about": "About Us",
-    "services": "Services",
+    "services": "Services and Works",
     "contact": "Contact",
     "curriculum": "Work with Us",
     "cotizar": "Quote"
@@ -38,7 +38,7 @@
   "footer-menu": {
     "index-footer": "Home",
     "about-footer": "About Us",
-    "services-footer": "Services",
+    "services-footer": "Services and Works",
     "contact-footer": "Contact"
   },
   "about": {
@@ -68,7 +68,8 @@
     },
   "basicsservices": {
       "servicio-titulo": "Services",  
-      "servicio-titulo-parrafo": "We provide specialized labor outsourcing services tailored to the operational, logistical, and commercial needs of our clients.",  
+      "servicio-titulo-parrafo": "We provide specialized labor outsourcing services tailored to the operational, logistical, and commercial needs of our clients.", 
+      "servicio-titulo-parrafo-2": "In addition, we have labor for Civil, Industrial, and Road Works.", 
       "basicsservices-titulo-1": "Basic Services",
       "basicsservices-parrafo-1": "Enhancing our clients' efficiency with agile and specialized solutions. Fundamental services that drive optimization and performance.",
       "basico-1": "Part Selection, Analysis, and Recovery",
@@ -87,7 +88,7 @@
       "basico-parrafo-7": "Careful material selection for recycling is essential to maximize process efficiency, ensure the quality of recycled materials, and promote a more sustainable and waste-free future.",
       "basico-8": "Outsourced Labor Services",
       "basico-parrafo-8": "Outsourced labor in production or logistics processes of our clients, corrective or scheduled maintenance of assets by our clients, personnel for facility installations or assembly of production lines including connections, commercial sectors, product and/or process engineering, among others",
-      "btn-volver-servicio": "Back to Services",
+      "btn-volver-servicio": "Back to Services and Works",
       "btn-mas-basico": "More Basic Services"
   },      
   "technicalservices": {
@@ -114,6 +115,17 @@
       "tecnico-10": "Industrial Maintenance",
       "tecnico-parrafo-10":"Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor",
       "btn-mas-tecnico": "More Technical Services"    
+  },
+  "obras": {
+    "obras-titulo-1": "Works",
+    "obras-parrafo-1": "Solutions for industrial, civil, and road works.",
+    "obra-1": "Civil Works",
+    "obra-2": "Industrial Works",
+    "obra-3": "Road Works",
+    "obra-4": "Industrial Works",
+    "obra-5": "Road Works",
+    "obra-6": "Civil Works",    
+    "btn-mas-obras": "More Works"   
   },
   "servicio-resto": {
       "servicio-resto-titulo-1": "Clients",

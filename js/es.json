@@ -3,7 +3,7 @@
       "nav": {
         "index": "Inicio",
         "about": "Quiénes Somos",
-        "services": "Servicios",
+        "services": "Servicios y Obras",
         "contact": "Contacto",
         "curriculum": "Trabaja con Nosotros",
         "cotizar": "Cotizar"
@@ -70,8 +70,9 @@
       "basicsservices": {
         "servicio-titulo": "Servicios",
         "servicio-titulo-parrafo": "Brindamos servicios de tercerización de mano de obra especializada en tareas operativas, logísticas y comerciales a la medida de las necesidades de nuestros clientes.",
+        "servicio-titulo-parrafo-2": "Además contamos con mano de obra para Obras Civiles, Industriales y Viales.",
         "basicsservices-titulo-1": "Servicios Básicos",
-        "basicsservices-parrafo-1": "Potenciando la eficiencia de nuestros clientes con soluciones agiles y especializadas. Servicios básicos que impulsan la optimización y el rendimiento.",
+        "basicsservices-parrafo-1": "Potenciando la eficiencia de nuestros clientes con soluciones agiles y especializadas. Servicios básicos que impulsan la optimización y el rendimiento.",        
         "basico-1": "Selección, Análisis y Recuperación de Piezas",
         "basico-parrafo-1": "Clasificación y recupero (retrabajos) de piezas con defectos de calidad, evitando paradas productivas en los procesos propios de nuestros clientes. Seguimientos (trazabilidad), auditorias, análisis de causas origen, etc.",
         "basico-2": "Embarques Controlados (Cargas y Descargas de Mercaderías)",

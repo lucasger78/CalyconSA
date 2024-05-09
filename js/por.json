@@ -2,7 +2,7 @@
   "nav": {
     "index": "Início",
     "about": "Sobre Nós",
-    "services": "Serviços",
+    "services": "Serviços e Obras",
     "contact": "Contato",
     "curriculum": "Trabalhe Conosco",
     "cotizar": "Orçamento"
@@ -37,7 +37,7 @@
   "footer-menu": {
     "index-footer": "Início",
     "about-footer": "Sobre Nós",
-    "services-footer": "Serviços",
+    "services-footer": "Serviços e Obras",
     "contact-footer": "Contato"
   },
   "about": {
@@ -86,7 +86,7 @@
     "basico-parrafo-7": "A seleção cuidadosa de materiais para reciclagem é fundamental para maximizar a eficiência do processo, garantir a qualidade dos materiais reciclados e promover um futuro mais sustentável e livre de resíduos",
     "basico-8": "Serviços Terceirizados de Mão de Obra em Geral",
     "basico-parrafo-8": "Mão de obra terceirizada em processos produtivos ou logísticos de nossos clientes, manutenções corretivas ou programadas por nossos clientes de seus ativos, pessoal para instalações ou montagens de linhas produtivas incluindo conexões, setores comerciais, engenharia de produtos e/ou processos, entre outros.",
-    "btn-volver-servicio": "voltar para Serviços",
+    "btn-volver-servicio": "voltar para Serviços e Obras",
     "btn-mas-basico": "Mais Serviços Básicos"
 
   },        
@@ -114,6 +114,17 @@
     "tecnico-10": "Manutenção Industrial",
     "tecnico-parrafo-10":"Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor",
     "btn-mas-tecnico": "Mais Serviços Técnicos"   
+  },
+  "obras": {
+    "obras-titulo-1": "Obras",
+    "obras-parrafo-1": "Soluções para obras industriais, civis ou viárias.",
+    "obra-1": "Obras Civis",
+    "obra-2": "Obras Industriais",
+    "obra-3": "Obras Viárias",
+    "obra-4": "Obras Industriais",
+    "obra-5": "Obras Viárias",
+    "obra-6": "Obras Civis",    
+    "btn-mas-obras": "Mais Obras"   
   },
   "servicio-resto": {
     "servicio-resto-titulo-1": "Clientes",
