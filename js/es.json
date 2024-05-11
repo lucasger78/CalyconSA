@@ -89,7 +89,7 @@
         "basico-parrafo-7":"La selección cuidadosa de materiales para el reciclado es fundamental para maximizar la eficiencia del proceso, garantizar la calidad de los materiales reciclados y promover un futuro más sustentable y libre de residuos",
         "basico-8": "Servicios Tercerizado de Mano de Obra en General",
         "basico-parrafo-8":"Mano de obra tercerizada en procesos productivos o logísticos de nuestros clientes, mantenimientos correctivos o programados por nuestros clientes de sus activos, personal para Instalaciones o montajes de líneas productivas incluyendo acometidas, rubros comerciales, ingenieria de productos y/o procesos, entre otros.",        
-        "btn-volver-servicio": "volver a Servicios",
+        "btn-volver-servicio": "volver a Servicios y Obras",
         "btn-mas-basico": "Más Servicios Básicos"
       },      
       "technicalservices": {
@@ -117,6 +117,17 @@
         "tecnico-parrafo-10":"Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incdidunt ut laboret dolor magna ut consequat siad esqudiat dolor",
         "btn-mas-tecnico": "Más Servicios Técnicos"    
         
+      },
+      "obras": {
+        "obras-titulo-1": "Obras",
+        "obras-parrafo-1": "Soluciones tanto para obras industriales, civiles o viales.",
+        "obra-1": "Obras Civiles",
+        "obra-2": "Obras Industriales",
+        "obra-3": "Obras Viales",
+        "obra-4": "Obras Industriales",
+        "obra-5": "Obras Viales",
+        "obra-6": "Obras Civiles",    
+        "btn-mas-obras": "Mas Obras"   
       },
       "servicio-resto": {
         "servicio-resto-titulo-1": "Clientes",
