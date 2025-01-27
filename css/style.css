@@ -138,11 +138,11 @@
 /* TRABAJÁ CON NOSOTROS */
 
 .cv {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 105px;
-  left: 40px;
+  position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	left:40px;
   background-color: #1975b7;
   color: #fff;
   border-radius: 50px;
@@ -371,8 +371,10 @@ li {
 /* LOGO NORMAS ISO */
 
 .iso-logo {
-  width: 9em;
-  height: 5.8em;
+  width: auto;
+  height: auto;
+  max-width: 10em !important; 
+  max-height: 17.5em !important; 
   display: flex;
   position:fixed;left:30px; max-height: 90px; max-width: 30;
   top: 100px; 
@@ -422,6 +424,25 @@ li {
   .contact-row:first-child .contact-item:first-child {
     flex-basis: 100%;
   }
+
+  .iso-logo {
+    width: auto;
+    height: auto;
+    max-width: 8em !important; 
+    max-height: 12em !important; 
+    display: flex;
+    position:fixed;left:30px; max-height: 90px; max-width: 30;
+    top: 100px; 
+    padding-right: 70px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    justify-self: right;
+    opacity: 1;
+    transition: opacity 0.8s ease, transform 0.8s ease; 
+    transform: translateY(0); 
+  }
+
+  
 }
 
 
