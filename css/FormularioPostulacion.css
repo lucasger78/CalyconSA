@@ -1,0 +1,306 @@
+/* FormularioPostulacion.css */
+/* Basado en el estilo de calycon.com.ar */
+
+.formulario-postulacion-container {
+  max-width: 1200px;
+  margin: 80px auto 40px;
+  padding: 0 20px;
+  font-family: 'Hind', sans-serif;
+}
+
+.formulario-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.formulario-titulo {
+  font-size: 42px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.formulario-subtitulo {
+  font-size: 18px;
+  color: #7f8c8d;
+  font-weight: 300;
+}
+
+/* Mensajes */
+.mensaje {
+  padding: 15px 20px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  animation: slideDown 0.3s ease;
+}
+
+.mensaje-exito {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.mensaje-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Formulario */
+.formulario-postulacion {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 40px;
+}
+
+.form-section {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #e74c3c;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Grid de formulario */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #34495e;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 1px solid #dfe6e9;
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: 'Hind', sans-serif;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Radio buttons */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.radio-group-inline {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 15px;
+  color: #2c3e50;
+  transition: color 0.2s ease;
+}
+
+.radio-label:hover {
+  color: #e74c3c;
+}
+
+.radio-label input[type="radio"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #e74c3c;
+}
+
+.radio-label span {
+  user-select: none;
+}
+
+/* File inputs */
+.form-group input[type="file"] {
+  padding: 10px;
+  border: 2px dashed #dfe6e9;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.form-group input[type="file"]:hover {
+  border-color: #e74c3c;
+  background-color: #fef5f5;
+}
+
+.file-info {
+  font-size: 13px;
+  color: #95a5a6;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Botones */
+.form-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid #ecf0f1;
+}
+
+.btn-submit,
+.btn-clear {
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Hind', sans-serif;
+}
+
+.btn-submit {
+  background-color: #e74c3c;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(231, 76, 60, 0.3);
+}
+
+.btn-submit:hover:not(:disabled) {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(231, 76, 60, 0.4);
+}
+
+.btn-submit:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-clear {
+  background-color: transparent;
+  color: #34495e;
+  border: 2px solid #34495e;
+}
+
+.btn-clear:hover {
+  background-color: #34495e;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .formulario-postulacion-container {
+    margin: 40px auto 20px;
+  }
+
+  .formulario-titulo {
+    font-size: 32px;
+  }
+
+  .formulario-postulacion {
+    padding: 30px 20px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-submit,
+  .btn-clear {
+    width: 100%;
+  }
+
+  .radio-group-inline {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .formulario-titulo {
+    font-size: 26px;
+  }
+
+  .formulario-subtitulo {
+    font-size: 16px;
+  }
+
+  .formulario-postulacion {
+    padding: 20px 15px;
+  }
+}

@@ -36,3 +36,8 @@ $(window).load(function(){
         loop: true,
     });
 });
+
+
+                    
+
+        

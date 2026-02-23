@@ -463,6 +463,12 @@ li {
   width: 2000%; 
   transform: translateX(0%);
 }
+.swiper-wrapper-cotizar {
+  display: flex;
+  animation: slide 60s linear infinite;
+  width: 2000%; 
+  transform: translateX(0%);
+}
 
 .swiper-slide {
   flex: 0 0 20%; 
