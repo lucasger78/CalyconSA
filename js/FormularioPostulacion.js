@@ -295,7 +295,7 @@
 //  Envía el formulario al Google Apps Script
 // =============================================
 
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxp2ww9kTv5XO0_9p4K1m-Lfk30eUy69OXp0vYten9FEjntFq20HxDot4OU8NprbJflpg/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzV2l5iJ7Q0hbpTaoszIQu-AS5UwVrHSLAWsOVjFWQxnV3QzOK1VCXvJ6fcDH6salCFXw/exec';
 
 // ── Mostrar/ocultar secciones condicionales ──────────────────────────────────
 
