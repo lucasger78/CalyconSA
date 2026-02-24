@@ -328,14 +328,23 @@ li {
 }
 
 .footer-text {
-	font-size: xx-small;
-	opacity: 0.1;
+	font-size: small;
+	/* opacity: 0.1; */
 }
 
 .footer-name {
 	text-transform: uppercase;
 	font-size: small;
   color: #1975b7;
+}
+
+.footer-name:hover {
+  color: #0b3553;
+  /* text-decoration: underline; */
+}
+
+.footer-copywrite{
+  font-size: small !important;
 }
 
 /* REDES CONTACT */
