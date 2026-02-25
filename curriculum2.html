@@ -285,7 +285,7 @@
 
                     <div class="form-group" id="grupo-referente" style="display: none;">
                         <label data-section="form" data-value="nombre-referente">Nombre y apellido del referente *</label>
-                        <input type="text" name="nombreReferente" required>
+                        <input type="text" name="nombreReferente">
                     </div>
 
                     <div class="form-group">
@@ -367,7 +367,7 @@
                     <h2 class="section-title" data-section="form" data-value="perfil-operario-titulo">Perfil Operario/a</h2>
                     <div class="form-group">
                         <label data-section="form" data-value="oficio-principal">Oficio Principal *</label>
-                        <select name="oficioPrincipal">
+                        <select name="oficioPrincipal" required>
                             <option value="" data-section="form" data-value="seleccione">Seleccione una opción</option>
                             <option value="Operario Producción" data-section="form" data-value="oficio-produccion">Operario Producción</option>
                             <option value="Mantenimiento" data-section="form" data-value="oficio-mantenimiento">Mantenimiento</option>
@@ -439,13 +439,13 @@
                         <!-- Solo Profesional: Título -->
                         <div class="form-group" id="grupo-titulo" style="display: none;">
                             <label data-section="form" data-value="titulo-profesional">Título Profesional *</label>
-                            <input type="text" name="tituloProfesional" placeholder="Ej: Ing. Industrial, Lic. en RRHH...">
+                            <input type="text" name="tituloProfesional" placeholder="Ej: Ing. Industrial, Lic. en RRHH..." required>
                         </div>
 
                         <!-- Solo Operario: Profesión -->
                         <div class="form-group" id="grupo-profesion" style="display: none;">
                             <label data-section="form" data-value="profesion">Profesión / Oficio *</label>
-                            <input type="text" name="profesion" placeholder="Ej: Soldador, Electricista...">
+                            <input type="text" name="profesion" placeholder="Ej: Soldador, Electricista..." required>
                         </div>
 
                         <div class="form-group">
@@ -611,9 +611,6 @@
         <script src="js/components/swiper.min.js" type="text/javascript"></script>
         <script src="js/scripts.js" type="text/javascript"></script>
         <script src="js/languages.js"></script>
-
-        <!-- SweetAlert cdn -->
-         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         <!-- Formulario Postulaciones -->
         <script src="js/FormularioPostulacion.js"></script>
