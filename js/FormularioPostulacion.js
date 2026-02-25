@@ -81,18 +81,16 @@ async function enviarFormulario(form) {
     if (tipoPerfil.value === 'Profesional') {
       const titulo = form.elements['tituloProfesional'];
       if (!titulo || !titulo.value.trim()) throw new Error('El campo Título es obligatorio.');
+      const puesto = form.elements['puestoInteres'];
+      if (!puesto || !puesto.value) throw new Error('El campo Puesto de Interés es obligatorio.');
+      const experiencia = form.elements['anosExperiencia'];
+      if (!experiencia || !experiencia.value) throw new Error('El campo Años de Experiencia es obligatorio.');
     }
     if (tipoPerfil.value === 'Operario') {
       const profesion = form.elements['profesion'];
       if (!profesion || !profesion.value.trim()) throw new Error('El campo Profesión es obligatorio.');
       const oficio = form.elements['oficioPrincipal'];
       if (!oficio || !oficio.value) throw new Error('El campo Oficio Principal es obligatorio.');
-    }
-    if (tipoPerfil.value === 'Profesional') {
-      const puesto = form.elements['puestoInteres'];
-      if (!puesto || !puesto.value) throw new Error('El campo Puesto de Interés es obligatorio.');
-      const experiencia = form.elements['anosExperiencia'];
-      if (!experiencia || !experiencia.value) throw new Error('El campo Años de Experiencia es obligatorio.');
     }
     const referido = form.querySelector('input[name="referido"]:checked');
     if (referido && referido.value === 'Sí') {
@@ -127,9 +125,7 @@ async function enviarFormulario(form) {
       allowOutsideClick: false,
       allowEscapeKey: false,
       showConfirmButton: false,
-      didOpen: () => {
-        Swal.showLoading();
-      }
+      didOpen: () => { Swal.showLoading(); }
     });
 
     // ── Recolectar y enviar ────────────────────────────────────────────────
@@ -156,7 +152,7 @@ async function enviarFormulario(form) {
       Swal.fire({
         html: `
           <div style="text-align:center; padding: 10px 0;">
-            <img src="img/logo_ok.png" alt="Calycon" style="max-width:160px; margin-bottom:18px;">
+            <img src="img/logoDark_ok.png" alt="Calycon" style="max-width:160px; margin-bottom:18px;">
             <div style="font-size:22px; font-weight:700; color:#1a3c6e; margin-bottom:8px;">
               ¡Postulación enviada con éxito!
             </div>
@@ -197,17 +193,36 @@ async function enviarFormulario(form) {
   }
 }
 
-// ── Recolectar todos los campos de texto/select/radio/textarea ───────────────
+// ── Recolectar todos los campos — incluye campos ocultos ─────────────────────
 
 function recolectarDatos(form) {
   const datos = {};
-  const formData = new FormData(form);
-  formData.forEach(function (value, key) {
-    if (form.elements[key] && form.elements[key].type === 'file') return;
-    if (typeof value === 'string') {
-      datos[key] = value;
+
+  // Todos los campos: input, select, textarea — independientemente de si están ocultos
+  const campos = [
+    'tipoPerfil', 'nombreCompleto', 'cuil', 'fechaNacimiento', 'telefono', 'email',
+    'provincia', 'localidad', 'calle', 'numero', 'piso', 'dpto', 'barrio',
+    'referido', 'nombreReferente', 'tieneConocidos', 'nombreConocido',
+    'trabajoCalycon', 'motivoBaja', 'experienciaStellantis', 'modalidad', 'nombreEmpresa',
+    'oficioPrincipal', 'puestoInteres', 'anosExperiencia',
+    'nivelEducativo', 'tituloProfesional', 'profesion', 'disponibilidadHoraria', 'tipoLicencia'
+  ];
+
+  campos.forEach(function(nombre) {
+    const el = form.elements[nombre];
+    if (!el) return;
+
+    // Radio buttons — buscar el seleccionado
+    if (el.length && el[0] && el[0].type === 'radio') {
+      const checked = form.querySelector('input[name="' + nombre + '"]:checked');
+      datos[nombre] = checked ? checked.value : '';
+    }
+    // Select o input/textarea normales
+    else if (el.value !== undefined) {
+      datos[nombre] = el.value || '';
     }
   });
+
   return datos;
 }
 
@@ -234,7 +249,7 @@ function leerArchivos(form) {
   return Promise.all(promesas);
 }
 
-// ── Mostrar mensaje (solo para compatibilidad, ya no se usa) ─────────────────
+// ── Mostrar mensaje (compatibilidad) ─────────────────────────────────────────
 
 function mostrarMensaje(container, tipo, texto) {
   const colores = {
