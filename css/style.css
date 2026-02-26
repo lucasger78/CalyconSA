@@ -520,6 +520,13 @@ li {
 /* fin carrusel logos */
 
 
+/* SweetAlert Custom */
+.swal-title-custom {
+  color: #1975b7;
+  font-weight: bold;
+}
+
+
 
 
 

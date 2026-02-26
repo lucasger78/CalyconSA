@@ -1,264 +1,237 @@
 // =============================================
 //  FormularioPostulacion.js
-//  Envía el formulario al Google Apps Script
+//  Calycon - Formulario de Postulaciones
 // =============================================
 
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxp2ww9kTv5XO0_9p4K1m-Lfk30eUy69OXp0vYten9FEjntFq20HxDot4OU8NprbJflpg/exec';
-
-// ── Mostrar/ocultar secciones condicionales ──────────────────────────────────
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzWuCaMnro3kO2Jb9cXDJK628aNV3VG6G_TZjb8BA3feq2DKWpkZ3d2SjKn1sUsGtYZsQ/exec';
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  // Tipo de perfil → secciones operario / profesional + campos condicionales
+  // ── 1. TIPO DE PERFIL ────────────────────────────────────────────────────────
   document.querySelectorAll('input[name="tipoPerfil"]').forEach(function (radio) {
     radio.addEventListener('change', function () {
-      const esOperario = this.value === 'Operario';
+      var esOperario = this.value === 'Operario';
       document.getElementById('seccion-operario').style.display    = esOperario ? 'block' : 'none';
       document.getElementById('seccion-profesional').style.display = esOperario ? 'none'  : 'block';
-      document.getElementById('grupo-titulo').style.display        = esOperario ? 'none'  : 'block';
       document.getElementById('grupo-profesion').style.display     = esOperario ? 'block' : 'none';
+      document.getElementById('grupo-titulo').style.display        = esOperario ? 'none'  : 'block';
+      if (esOperario) {
+        document.querySelector('input[name="tituloProfesional"]').value = '';
+      } else {
+        document.querySelector('input[name="profesion"]').value = '';
+        var selectOficio = document.querySelector('select[name="oficioPrincipal"]');
+        if (selectOficio) selectOficio.value = '';
+      }
     });
   });
 
-  // Referido
+  // ── 2. REFERIDO ──────────────────────────────────────────────────────────────
   document.querySelectorAll('input[name="referido"]').forEach(function (radio) {
     radio.addEventListener('change', function () {
-      document.getElementById('grupo-referente').style.display = this.value === 'Sí' ? 'block' : 'none';
+      var mostrar = this.value === 'Sí';
+      document.getElementById('grupo-referente').style.display = mostrar ? 'block' : 'none';
+      if (!mostrar) document.querySelector('input[name="nombreReferente"]').value = '';
     });
   });
 
-  // Conocidos en Calycon
+  // ── 3. CONOCIDOS EN CALYCON ──────────────────────────────────────────────────
   document.querySelectorAll('input[name="tieneConocidos"]').forEach(function (radio) {
     radio.addEventListener('change', function () {
-      document.getElementById('grupo-conocido').style.display = this.value === 'Sí' ? 'block' : 'none';
+      var mostrar = this.value === 'Sí';
+      document.getElementById('grupo-conocido').style.display = mostrar ? 'block' : 'none';
+      if (!mostrar) document.querySelector('input[name="nombreConocido"]').value = '';
     });
   });
 
-  // Trabajó con Calycon
+  // ── 4. TRABAJÓ CON CALYCON ───────────────────────────────────────────────────
   document.querySelectorAll('input[name="trabajoCalycon"]').forEach(function (radio) {
     radio.addEventListener('change', function () {
-      document.getElementById('grupo-motivo-baja').style.display = this.value === 'Sí' ? 'block' : 'none';
+      var mostrar = this.value === 'Sí';
+      document.getElementById('grupo-motivo-baja').style.display = mostrar ? 'block' : 'none';
+      if (!mostrar) document.querySelector('textarea[name="motivoBaja"]').value = '';
     });
   });
 
-  // Experiencia Stellantis
+  // ── 5. EXPERIENCIA STELLANTIS ────────────────────────────────────────────────
   document.querySelectorAll('input[name="experienciaStellantis"]').forEach(function (radio) {
     radio.addEventListener('change', function () {
-      document.getElementById('grupo-stellantis').style.display = this.value === 'Sí' ? 'block' : 'none';
+      var mostrar = this.value === 'Sí';
+      document.getElementById('grupo-stellantis').style.display = mostrar ? 'block' : 'none';
+      if (!mostrar) {
+        document.querySelectorAll('input[name="modalidad"]').forEach(function (r) { r.checked = false; });
+        document.getElementById('grupo-empresa').style.display = 'none';
+        document.querySelector('input[name="nombreEmpresa"]').value = '';
+      }
     });
   });
 
-  // Modalidad → empresa tercerizadora
+  // ── 6. MODALIDAD ─────────────────────────────────────────────────────────────
   document.querySelectorAll('input[name="modalidad"]').forEach(function (radio) {
     radio.addEventListener('change', function () {
-      document.getElementById('grupo-empresa').style.display = this.value === 'Tercerizada' ? 'block' : 'none';
+      var mostrar = this.value === 'Tercerizada';
+      document.getElementById('grupo-empresa').style.display = mostrar ? 'block' : 'none';
+      if (!mostrar) document.querySelector('input[name="nombreEmpresa"]').value = '';
     });
   });
 
-  // ── Submit ───────────────────────────────────────────────────────────────
+  // ── 7. VALIDACIÓN ARCHIVOS ───────────────────────────────────────────────────
+  document.querySelectorAll('input[type="file"]').forEach(function (input) {
+    input.addEventListener('change', function () { validarArchivo(this); });
+  });
+
+  // ── 8. SUBMIT ────────────────────────────────────────────────────────────────
   document.getElementById('formulario-postulacion').addEventListener('submit', async function (e) {
     e.preventDefault();
-    enviarFormulario(this);
+    await enviarFormulario(this);
   });
+
 });
 
 
-// ── Función principal de envío ────────────────────────────────────────────────
+// ── Validar archivo ───────────────────────────────────────────────────────────
+function validarArchivo(input) {
+  var file = input.files[0];
+  if (!file) return true;
+  if (file.size > 5 * 1024 * 1024) {
+    Swal.fire({ icon: 'error', title: 'Archivo muy grande', text: '"' + input.name + '" supera 5MB.', confirmButtonColor: '#c0392b' });
+    input.value = ''; return false;
+  }
+  if (!['application/pdf','image/jpeg','image/jpg','image/png'].includes(file.type)) {
+    Swal.fire({ icon: 'error', title: 'Formato no válido', text: '"' + input.name + '" debe ser PDF, JPG o PNG.', confirmButtonColor: '#c0392b' });
+    input.value = ''; return false;
+  }
+  return true;
+}
 
+
+// ── Enviar formulario ─────────────────────────────────────────────────────────
 async function enviarFormulario(form) {
-  const btnEnviar    = document.getElementById('btn-enviar');
-  const msgContainer = document.getElementById('mensaje-container');
+  var btnEnviar    = document.getElementById('btn-enviar');
+  var msgContainer = document.getElementById('mensaje-container');
 
   btnEnviar.disabled    = true;
   btnEnviar.textContent = 'Enviando...';
   msgContainer.innerHTML = '';
 
+  Swal.fire({
+    title: 'Enviando postulación...',
+    text:  'Por favor esperá, estamos subiendo tus archivos.',
+    allowOutsideClick: false,
+    didOpen: function () { Swal.showLoading(); }
+  });
+
   try {
-    // ── Validaciones campos condicionales ──────────────────────────────────
-    const tipoPerfil = form.querySelector('input[name="tipoPerfil"]:checked');
-    if (!tipoPerfil) throw new Error('Seleccioná un tipo de perfil.');
+    var datos    = recolectarDatos();
+    var archivos = await leerArchivos(form);
 
-    if (tipoPerfil.value === 'Profesional') {
-      const titulo = form.elements['tituloProfesional'];
-      if (!titulo || !titulo.value.trim()) throw new Error('El campo Título es obligatorio.');
-      const puesto = form.elements['puestoInteres'];
-      if (!puesto || !puesto.value) throw new Error('El campo Puesto de Interés es obligatorio.');
-      const experiencia = form.elements['anosExperiencia'];
-      if (!experiencia || !experiencia.value) throw new Error('El campo Años de Experiencia es obligatorio.');
-    }
-    if (tipoPerfil.value === 'Operario') {
-      const profesion = form.elements['profesion'];
-      if (!profesion || !profesion.value.trim()) throw new Error('El campo Profesión es obligatorio.');
-      const oficio = form.elements['oficioPrincipal'];
-      if (!oficio || !oficio.value) throw new Error('El campo Oficio Principal es obligatorio.');
-    }
-    const referido = form.querySelector('input[name="referido"]:checked');
-    if (referido && referido.value === 'Sí') {
-      const ref = form.elements['nombreReferente'];
-      if (!ref || !ref.value.trim()) throw new Error('El nombre del referente es obligatorio.');
-    }
-    const conocido = form.querySelector('input[name="tieneConocidos"]:checked');
-    if (conocido && conocido.value === 'Sí') {
-      const con = form.elements['nombreConocido'];
-      if (!con || !con.value.trim()) throw new Error('El nombre del conocido es obligatorio.');
-    }
-    const trabajoCalycon = form.querySelector('input[name="trabajoCalycon"]:checked');
-    if (trabajoCalycon && trabajoCalycon.value === 'Sí') {
-      const motivo = form.elements['motivoBaja'];
-      if (!motivo || !motivo.value.trim()) throw new Error('El motivo de baja es obligatorio.');
-    }
-    const stellantis = form.querySelector('input[name="experienciaStellantis"]:checked');
-    if (stellantis && stellantis.value === 'Sí') {
-      const modalidad = form.querySelector('input[name="modalidad"]:checked');
-      if (!modalidad) throw new Error('Seleccioná una modalidad de Stellantis.');
-      if (modalidad.value === 'Tercerizada') {
-        const empresa = form.elements['nombreEmpresa'];
-        if (!empresa || !empresa.value.trim()) throw new Error('El nombre de la empresa tercerizadora es obligatorio.');
-      }
-    }
+    console.log('=== DATOS ===', JSON.stringify(datos, null, 2));
+    console.log('=== ARCHIVOS ===', archivos.map(function(a){ return a.campo + ': ' + a.nombre; }));
 
-    // ── Mostrar alerta de carga ────────────────────────────────────────────
-    Swal.fire({
-      title: 'Enviando postulación...',
-      html: '<span style="color:#555;">Por favor esperá, estamos subiendo tus archivos.</span>',
-      timerProgressBar: true,
-      allowOutsideClick: false,
-      allowEscapeKey: false,
-      showConfirmButton: false,
-      didOpen: () => { Swal.showLoading(); }
+    var response = await fetch(APPS_SCRIPT_URL, {
+      method: 'POST', redirect: 'follow',
+      body: JSON.stringify({ datos: datos, archivos: archivos })
     });
 
-    // ── Recolectar y enviar ────────────────────────────────────────────────
-    const datos    = recolectarDatos(form);
-    const archivos = await leerArchivos(form);
-    const payload  = { datos, archivos };
+    var texto = await response.text();
+    console.log('=== RESPUESTA ===', texto);
 
-    const response = await fetch(APPS_SCRIPT_URL, {
-      method:   'POST',
-      redirect: 'follow',
-      body:     JSON.stringify(payload)
-    });
+    var result;
+    try   { result = JSON.parse(texto); }
+    catch (_) { result = { status: 'ok' }; }
 
-    const texto = await response.text();
-    let result;
-    try {
-      result = JSON.parse(texto);
-    } catch (_) {
-      result = { status: 'ok' };
-    }
+    Swal.close();
 
-    // ── Resultado ─────────────────────────────────────────────────────────
     if (result.status === 'ok') {
       Swal.fire({
-        html: `
-          <div style="text-align:center; padding: 10px 0;">
-            <img src="img/logoDark_ok.png" alt="Calycon" style="max-width:160px; margin-bottom:18px;">
-            <div style="font-size:22px; font-weight:700; color:#1a3c6e; margin-bottom:8px;">
-              ¡Postulación enviada con éxito!
-            </div>
-            <div style="font-size:15px; color:#555;">
-              Nos pondremos en contacto a la brevedad.
-            </div>
-          </div>
-        `,
+        imageUrl: 'img/logoDark_ok.png',
+        imageHeight: 60, // ajusta el tamaño según tu logo
+        imageAlt: 'Logo',
         icon: 'success',
-        iconColor: '#28a745',
+        title: '¡Postulación enviada!',
+        html: 'Recibimos tu postulación correctamente.<br>Nos pondremos en contacto a la brevedad.',
         confirmButtonText: 'Aceptar',
-        confirmButtonColor: '#1a3c6e'
+        confirmButtonColor: '#1975b7',
+        customClass: {
+          title: 'swal-title-custom'               
+           }
       });
+
       form.reset();
-      ['seccion-operario','seccion-profesional','grupo-referente',
-       'grupo-conocido','grupo-motivo-baja','grupo-stellantis','grupo-empresa',
-       'grupo-titulo','grupo-profesion']
-        .forEach(function(id) {
-          var el = document.getElementById(id);
-          if (el) el.style.display = 'none';
-        });
+      ['seccion-operario','seccion-profesional','grupo-referente','grupo-conocido',
+       'grupo-motivo-baja','grupo-stellantis','grupo-empresa','grupo-titulo','grupo-profesion']
+        .forEach(function (id) { var el = document.getElementById(id); if (el) el.style.display = 'none'; });
     } else {
       throw new Error(result.message || 'Error desconocido en el servidor.');
     }
 
   } catch (err) {
     console.error(err);
+    Swal.close();
     Swal.fire({
-      icon: 'error',
-      title: 'Error al enviar',
-      html: '<span style="color:#555;">' + err.message + '.<br>Por favor intentá nuevamente o contactanos directamente.</span>',
-      confirmButtonText: 'Cerrar',
-      confirmButtonColor: '#dc3545'
+      icon: 'error', title: 'Error al enviar',
+      html: 'Ocurrió un problema:<br><b>' + err.message + '</b><br><br>Por favor intentá nuevamente.',
+      confirmButtonText: 'Cerrar', confirmButtonColor: '#c0392b'
     });
   } finally {
     btnEnviar.disabled    = false;
     btnEnviar.textContent = 'Enviar Postulación';
+    msgContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 }
 
-// ── Recolectar todos los campos — incluye campos ocultos ─────────────────────
 
-function recolectarDatos(form) {
-  const datos = {};
-
-  // Todos los campos: input, select, textarea — independientemente de si están ocultos
-  const campos = [
-    'tipoPerfil', 'nombreCompleto', 'cuil', 'fechaNacimiento', 'telefono', 'email',
-    'provincia', 'localidad', 'calle', 'numero', 'piso', 'dpto', 'barrio',
-    'referido', 'nombreReferente', 'tieneConocidos', 'nombreConocido',
-    'trabajoCalycon', 'motivoBaja', 'experienciaStellantis', 'modalidad', 'nombreEmpresa',
-    'oficioPrincipal', 'puestoInteres', 'anosExperiencia',
-    'nivelEducativo', 'tituloProfesional', 'profesion', 'disponibilidadHoraria', 'tipoLicencia'
+// ── Recolectar datos — lee directo del DOM, sin FormData ──────────────────────
+function recolectarDatos() {
+  var campos = [
+    'tipoPerfil',
+    'nombreCompleto','cuil','fechaNacimiento','telefono','email',
+    'provincia','localidad','calle','numero','piso','dpto','barrio',
+    'referido','nombreReferente',
+    'tieneConocidos','nombreConocido',
+    'trabajoCalycon','motivoBaja',
+    'experienciaStellantis','modalidad','nombreEmpresa',
+    'oficioPrincipal',
+    'puestoInteres','anosExperiencia',
+    'nivelEducativo','tituloProfesional','profesion',
+    'disponibilidadHoraria','tipoLicencia'
   ];
 
-  campos.forEach(function(nombre) {
-    const el = form.elements[nombre];
-    if (!el) return;
+  var datos = {};
+  campos.forEach(function (nombre) {
+    // Radio: buscar el marcado
+    var radioChecked = document.querySelector('input[type="radio"][name="' + nombre + '"]:checked');
+    if (radioChecked) { datos[nombre] = radioChecked.value; return; }
+    var anyRadio = document.querySelector('input[type="radio"][name="' + nombre + '"]');
+    if (anyRadio) { datos[nombre] = ''; return; }
 
-    // Radio buttons — buscar el seleccionado
-    if (el.length && el[0] && el[0].type === 'radio') {
-      const checked = form.querySelector('input[name="' + nombre + '"]:checked');
-      datos[nombre] = checked ? checked.value : '';
-    }
-    // Select o input/textarea normales
-    else if (el.value !== undefined) {
-      datos[nombre] = el.value || '';
-    }
+    // Textarea
+    var textarea = document.querySelector('textarea[name="' + nombre + '"]');
+    if (textarea) { datos[nombre] = textarea.value.trim(); return; }
+
+    // Select / input
+    var el = document.querySelector('[name="' + nombre + '"]');
+    datos[nombre] = el ? el.value.trim() : '';
   });
 
   return datos;
 }
 
-// ── Leer archivos y convertir a base64 ───────────────────────────────────────
 
+// ── Leer archivos y convertir a base64 ───────────────────────────────────────
 function leerArchivos(form) {
-  const camposArchivo = ['dniFrente', 'dniDorso', 'licenciaFrente', 'licenciaDorso', 'cv'];
-  const promesas = camposArchivo.map(function (nombre) {
-    const input = form.elements[nombre];
-    if (!input || !input.files || input.files.length === 0) {
-      return Promise.resolve({ campo: nombre, archivo: null });
-    }
-    const file = input.files[0];
+  var camposArchivo = ['licenciaFrente','licenciaDorso','dniFrente','dniDorso','cv'];
+  var promesas = camposArchivo.map(function (nombre) {
+    var input = form.elements[nombre];
+    if (!input || !input.files || input.files.length === 0) return Promise.resolve(null);
+    var file = input.files[0];
     return new Promise(function (resolve, reject) {
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        const base64 = e.target.result.split(',')[1];
-        resolve({ campo: nombre, nombre: file.name, tipo: file.type, base64: base64 });
+      var reader = new FileReader();
+      reader.onload  = function (e) {
+        resolve({ campo: nombre, nombre: file.name, tipo: file.type, base64: e.target.result.split(',')[1] });
       };
-      reader.onerror = function () { reject(new Error('No se pudo leer el archivo ' + nombre)); };
+      reader.onerror = function () { reject(new Error('No se pudo leer: ' + nombre)); };
       reader.readAsDataURL(file);
     });
   });
-  return Promise.all(promesas);
-}
-
-// ── Mostrar mensaje (compatibilidad) ─────────────────────────────────────────
-
-function mostrarMensaje(container, tipo, texto) {
-  const colores = {
-    success: { fondo: '#d4edda', borde: '#28a745', texto: '#155724' },
-    error:   { fondo: '#f8d7da', borde: '#dc3545', texto: '#721c24' }
-  };
-  const c = colores[tipo];
-  container.innerHTML =
-    '<div style="padding:16px 20px; margin:20px 0; border-radius:8px; ' +
-    'background:' + c.fondo + '; border:1px solid ' + c.borde + '; ' +
-    'color:' + c.texto + '; font-size:15px; font-weight:500;">' + texto + '</div>';
+  return Promise.all(promesas).then(function (r) { return r.filter(function (x) { return x !== null; }); });
 }

@@ -149,11 +149,10 @@
             <div class="content-lg container">
                 <div class="row row-space-1">
 
-                    <!-- FORMULARIO REACT -->
+                    <!-- FORMULARIO POSTULACION -->
 
         <div class="formulario-postulacion-container">
             <div class="formulario-header">
-                <!-- <h1 class="formulario-titulo" data-section="form" data-value="titulo">Trabajá con Nosotros</h1> -->
                 <h2 class="text-uppercase" data-section="form" data-value="titulo">Trabajá con Nosotros</h2>
                 <p class="formulario-subtitulo" data-section="form" data-value="subtitulo">Completa el formulario para postularte</p>
             </div>
@@ -161,23 +160,23 @@
             <div id="mensaje-container"></div>
 
             <form id="formulario-postulacion" class="formulario-postulacion">
-                
-                <!-- 1. TIPO DE PERFIL -->
+
+                <!-- ====== 1. TIPO DE PERFIL ====== -->
                 <section class="form-section">
                     <h2 class="section-title" data-section="form" data-value="tipo-perfil-titulo">Tipo de Perfil</h2>
                     <div class="radio-group">
                         <label class="radio-label">
                             <input type="radio" name="tipoPerfil" value="Operario" required>
-                            <span data-section="form" data-value="perfil-operario" style="color: rgb(59, 59, 59);">Perfil Operario/a</span>
+                            <span data-section="form" data-value="perfil-operario" style="color:rgb(59,59,59);">Perfil Operario/a</span>
                         </label>
                         <label class="radio-label">
-                            <input type="radio" name="tipoPerfil" value="Profesional" required>
-                            <span data-section="form" data-value="perfil-profesional" style="color: rgb(59, 59, 59);">Perfil Profesional</span>
+                            <input type="radio" name="tipoPerfil" value="Profesional">
+                            <span data-section="form" data-value="perfil-profesional" style="color:rgb(59,59,59);">Perfil Profesional</span>
                         </label>
                     </div>
                 </section>
 
-                <!-- 2. DATOS PERSONALES -->
+                <!-- ====== 2. DATOS PERSONALES ====== -->
                 <section class="form-section">
                     <h2 class="section-title" data-section="form" data-value="datos-personales-titulo">Datos Personales</h2>
                     <div class="form-grid">
@@ -204,14 +203,14 @@
                     </div>
                 </section>
 
-                <!-- 3. UBICACIÓN -->
+                <!-- ====== 3. UBICACIÓN ====== -->
                 <section class="form-section">
                     <h2 class="section-title" data-section="form" data-value="ubicacion-titulo">Ubicación</h2>
                     <div class="form-grid">
                         <div class="form-group">
                             <label data-section="form" data-value="provincia">Provincia *</label>
                             <select name="provincia" required>
-                                <option value="" data-section="form" data-value="seleccione">Seleccione una opción</option>
+                                <option value="">Seleccione una opción</option>
                                 <option value="Buenos Aires">Buenos Aires</option>
                                 <option value="CABA">CABA</option>
                                 <option value="Catamarca">Catamarca</option>
@@ -265,10 +264,10 @@
                     </div>
                 </section>
 
-                <!-- 4. REFERIDOS Y DATOS CLAVE -->
+                <!-- ====== 4. REFERIDOS Y DATOS CLAVE ====== -->
                 <section class="form-section">
                     <h2 class="section-title" data-section="form" data-value="referidos-titulo">Referidos y Datos Clave</h2>
-                    
+
                     <div class="form-group">
                         <label data-section="form" data-value="es-referido">¿Es referido? *</label>
                         <div class="radio-group-inline">
@@ -277,13 +276,13 @@
                                 <span data-section="form" data-value="si">Sí</span>
                             </label>
                             <label class="radio-label">
-                                <input type="radio" name="referido" value="No" required>
+                                <input type="radio" name="referido" value="No">
                                 <span data-section="form" data-value="no">No</span>
                             </label>
                         </div>
                     </div>
 
-                    <div class="form-group" id="grupo-referente" style="display: none;">
+                    <div class="form-group" id="grupo-referente" style="display:none;">
                         <label data-section="form" data-value="nombre-referente">Nombre y apellido del referente *</label>
                         <input type="text" name="nombreReferente">
                     </div>
@@ -296,13 +295,13 @@
                                 <span data-section="form" data-value="si">Sí</span>
                             </label>
                             <label class="radio-label">
-                                <input type="radio" name="tieneConocidos" value="No" required>
+                                <input type="radio" name="tieneConocidos" value="No">
                                 <span data-section="form" data-value="no">No</span>
                             </label>
                         </div>
                     </div>
 
-                    <div class="form-group" id="grupo-conocido" style="display: none;">
+                    <div class="form-group" id="grupo-conocido" style="display:none;">
                         <label data-section="form" data-value="nombre-conocido">Nombre y apellido del conocido *</label>
                         <input type="text" name="nombreConocido">
                     </div>
@@ -315,13 +314,13 @@
                                 <span data-section="form" data-value="si">Sí</span>
                             </label>
                             <label class="radio-label">
-                                <input type="radio" name="trabajoCalycon" value="No" required>
+                                <input type="radio" name="trabajoCalycon" value="No">
                                 <span data-section="form" data-value="no">No</span>
                             </label>
                         </div>
                     </div>
 
-                    <div class="form-group" id="grupo-motivo-baja" style="display: none;">
+                    <div class="form-group" id="grupo-motivo-baja" style="display:none;">
                         <label data-section="form" data-value="motivo-baja">Motivo de la baja *</label>
                         <textarea name="motivoBaja" rows="3"></textarea>
                     </div>
@@ -334,13 +333,13 @@
                                 <span data-section="form" data-value="si">Sí</span>
                             </label>
                             <label class="radio-label">
-                                <input type="radio" name="experienciaStellantis" value="No" required>
+                                <input type="radio" name="experienciaStellantis" value="No">
                                 <span data-section="form" data-value="no">No</span>
                             </label>
                         </div>
                     </div>
 
-                    <div id="grupo-stellantis" style="display: none;">
+                    <div id="grupo-stellantis" style="display:none;">
                         <div class="form-group">
                             <label data-section="form" data-value="modalidad">Modalidad *</label>
                             <div class="radio-group-inline">
@@ -354,129 +353,113 @@
                                 </label>
                             </div>
                         </div>
-
-                        <div class="form-group" id="grupo-empresa" style="display: none;">
+                        <div class="form-group" id="grupo-empresa" style="display:none;">
                             <label data-section="form" data-value="nombre-empresa">Nombre de la empresa tercerizadora *</label>
                             <input type="text" name="nombreEmpresa">
                         </div>
                     </div>
                 </section>
 
-                <!-- 5. PERFIL OPERARIO -->
-                <section class="form-section" id="seccion-operario" style="display: none;">
+                <!-- ====== 5. PERFIL OPERARIO (oculto por defecto) ====== -->
+                <section class="form-section" id="seccion-operario" style="display:none;">
                     <h2 class="section-title" data-section="form" data-value="perfil-operario-titulo">Perfil Operario/a</h2>
                     <div class="form-group">
                         <label data-section="form" data-value="oficio-principal">Oficio Principal *</label>
                         <select name="oficioPrincipal">
-                            <option value="" data-section="form" data-value="seleccione">Seleccione una opción</option>
-                            <option value="Operario Producción" data-section="form" data-value="oficio-produccion">Operario Producción</option>
-                            <option value="Mantenimiento" data-section="form" data-value="oficio-mantenimiento">Mantenimiento</option>
-                            <option value="Electricista" data-section="form" data-value="oficio-electricista">Electricista</option>
-                            <option value="Mecánico" data-section="form" data-value="oficio-mecanico">Mecánico</option>
-                            <option value="Soldador" data-section="form" data-value="oficio-soldador">Soldador</option>
-                            <option value="Pintor" data-section="form" data-value="oficio-pintor">Pintor</option>
-                            <option value="Retocador de Pintura" data-section="form" data-value="oficio-retocador">Retocador de Pintura</option>
-                            <option value="Microbollista" data-section="form" data-value="oficio-microbollista">Microbollista</option>
-                            <option value="Chapista" data-section="form" data-value="oficio-chapista">Chapista</option>
-                            <option value="Reparador de Interiores" data-section="form" data-value="oficio-reparador">Reparador de Interiores</option>
-                            <option value="Montador" data-section="form" data-value="oficio-montador">Montador</option>
-                            <option value="Logística" data-section="form" data-value="oficio-logistica">Logística</option>
-                            <option value="Calidad" data-section="form" data-value="oficio-calidad">Calidad</option>
-                            <option value="Autoelevador / Mulero" data-section="form" data-value="oficio-autoelevador">Autoelevador / Mulero</option>
-                            <option value="Otros" data-section="form" data-value="oficio-otros">Otros o Varios (especificar)</option>
+                            <option value="">Seleccione una opción</option>
+                            <option value="Operario Producción">Operario Producción</option>
+                            <option value="Mantenimiento">Mantenimiento</option>
+                            <option value="Electricista">Electricista</option>
+                            <option value="Mecánico">Mecánico</option>
+                            <option value="Soldador">Soldador</option>
+                            <option value="Pintor">Pintor</option>
+                            <option value="Retocador de Pintura">Retocador de Pintura</option>
+                            <option value="Microbollista">Microbollista</option>
+                            <option value="Chapista">Chapista</option>
+                            <option value="Reparador de Interiores">Reparador de Interiores</option>
+                            <option value="Montador">Montador</option>
+                            <option value="Logística">Logística</option>
+                            <option value="Calidad">Calidad</option>
+                            <option value="Autoelevador / Mulero">Autoelevador / Mulero</option>
+                            <option value="Otros">Otros o Varios (especificar)</option>
                         </select>
                     </div>
                 </section>
 
-                <!-- 6. PERFIL PROFESIONAL -->
-                <section class="form-section" id="seccion-profesional" style="display: none;">
+                <!-- ====== 6. PERFIL PROFESIONAL (oculto por defecto) ====== -->
+                <section class="form-section" id="seccion-profesional" style="display:none;">
                     <h2 class="section-title" data-section="form" data-value="perfil-profesional-titulo">Perfil Profesional</h2>
                     <div class="form-grid">
                         <div class="form-group">
                             <label data-section="form" data-value="puesto-interes">Puesto de Interés *</label>
-                            <select name="puestoInteres" required>
-                                <option value="" data-section="form" data-value="seleccione">Seleccione una opción</option>
-                                <option value="Administrativo General" data-section="form" data-value="puesto-administrativo">Administrativo General</option>
-                                <option value="Compras" data-section="form" data-value="puesto-compras">Compras</option>
-                                <option value="Logística" data-section="form" data-value="puesto-logistica">Logística</option>
-                                <option value="Recursos Humanos" data-section="form" data-value="puesto-rrhh">Recursos Humanos</option>
-                                <option value="Higiene y Seguridad" data-section="form" data-value="puesto-higiene">Higiene y Seguridad</option>
-                                <option value="Técnicos" data-section="form" data-value="puesto-tecnicos">Técnicos</option>
-                                <option value="Ingenieros" data-section="form" data-value="puesto-ingenieros">Ingenieros</option>
-                                <option value="Contabilidad" data-section="form" data-value="puesto-contabilidad">Contabilidad</option>
-                                <option value="Atención al Cliente" data-section="form" data-value="puesto-atencion">Atención al Cliente</option>
-                                <option value="Comercial" data-section="form" data-value="puesto-comercial">Comercial</option>
-                                <option value="Otros" data-section="form" data-value="puesto-otros">Otros</option>
+                            <select name="puestoInteres">
+                                <option value="">Seleccione una opción</option>
+                                <option value="Administrativo General">Administrativo General</option>
+                                <option value="Compras">Compras</option>
+                                <option value="Logística">Logística</option>
+                                <option value="Recursos Humanos">Recursos Humanos</option>
+                                <option value="Higiene y Seguridad">Higiene y Seguridad</option>
+                                <option value="Técnicos">Técnicos</option>
+                                <option value="Ingenieros">Ingenieros</option>
+                                <option value="Contabilidad">Contabilidad</option>
+                                <option value="Atención al Cliente">Atención al Cliente</option>
+                                <option value="Comercial">Comercial</option>
+                                <option value="Otros">Otros</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label data-section="form" data-value="anos-experiencia">Años de Experiencia *</label>
-                            <select name="anosExperiencia" required>
-                                <option value="" data-section="form" data-value="seleccione">Seleccione una opción</option>
-                                <option value="Sin experiencia" data-section="form" data-value="exp-sin">Sin experiencia</option>
-                                <option value="1 a 3 años" data-section="form" data-value="exp-1-3">1 a 3 años</option>
-                                <option value="3 a 5 años" data-section="form" data-value="exp-3-5">3 a 5 años</option>
-                                <option value="Más de 5 años" data-section="form" data-value="exp-mas-5">Más de 5 años</option>
+                            <select name="anosExperiencia">
+                                <option value="">Seleccione una opción</option>
+                                <option value="Sin experiencia">Sin experiencia</option>
+                                <option value="1 a 3 años">1 a 3 años</option>
+                                <option value="3 a 5 años">3 a 5 años</option>
+                                <option value="Más de 5 años">Más de 5 años</option>
                             </select>
                         </div>
                     </div>
                 </section>
 
-                <!-- 7. INFORMACIÓN COMPLEMENTARIA -->
+                <!-- ====== 7. INFORMACIÓN COMPLEMENTARIA ====== -->
                 <section class="form-section">
                     <h2 class="section-title" data-section="form" data-value="info-complementaria-titulo">Información Complementaria</h2>
                     <div class="form-grid">
+
                         <div class="form-group">
                             <label data-section="form" data-value="nivel-educativo">Nivel Educativo *</label>
                             <select name="nivelEducativo" required>
-                                <option value="" data-section="form" data-value="seleccione">Seleccione una opción</option>
-                                <option value="Secundario" data-section="form" data-value="nivel-secundario">Secundario</option>
-                                <option value="Terciario" data-section="form" data-value="nivel-terciario">Terciario</option>
-                                <option value="Universitario" data-section="form" data-value="nivel-universitario">Universitario</option>
+                                <option value="">Seleccione una opción</option>
+                                <option value="Secundario">Secundario</option>
+                                <option value="Terciario">Terciario</option>
+                                <option value="Universitario">Universitario</option>
                             </select>
                         </div>
 
-                        <!-- Solo Profesional: Título -->
-                        <div class="form-group" id="grupo-titulo" style="display: none;">
-                            <label data-section="form" data-value="titulo-profesional">Título Profesional *</label>
+                        <!-- Título Profesional: visible solo para Perfil Profesional -->
+                        <div class="form-group" id="grupo-titulo" style="display:none;">
+                            <label data-section="form" data-value="titulo-profesional">Título Profesional</label>
                             <input type="text" name="tituloProfesional" placeholder="Ej: Ing. Industrial, Lic. en RRHH...">
                         </div>
 
-                        <!-- Solo Operario: Profesión -->
-                        <div class="form-group" id="grupo-profesion" style="display: none;">
-                            <label data-section="form" data-value="profesion">Profesión / Oficio *</label>
+                        <!-- Profesión: visible solo para Perfil Operario -->
+                        <div class="form-group" id="grupo-profesion" style="display:none;">
+                            <label data-section="form" data-value="profesion">Profesión / Oficio</label>
                             <input type="text" name="profesion" placeholder="Ej: Soldador, Electricista...">
                         </div>
 
                         <div class="form-group">
                             <label data-section="form" data-value="disponibilidad">Disponibilidad Horaria *</label>
                             <select name="disponibilidadHoraria" required>
-                                <option value="" data-section="form" data-value="seleccione">Seleccione una opción</option>
-                                <option value="Full Time" data-section="form" data-value="disp-full">Full Time</option>
-                                <option value="Part Time" data-section="form" data-value="disp-part">Part Time</option>
+                                <option value="">Seleccione una opción</option>
+                                <option value="Full Time">Full Time</option>
+                                <option value="Part Time">Part Time</option>
                             </select>
                         </div>
-                    </div>
-                </section>
 
-                <!-- 8. DOCUMENTACIÓN -->
-                <section class="form-section">
-                    <h2 class="section-title" data-section="form" data-value="documentacion-titulo">Documentación</h2>
-                    <p class="file-info" data-section="form" data-value="formatos-aceptados">Formatos aceptados: PDF, JPG, PNG (máx. 5MB por archivo)</p>
-                    
-                    <div class="form-grid">
                         <div class="form-group">
-                            <label data-section="form" data-value="dni-frente">Foto DNI Frente *</label>
-                            <input type="file" name="dniFrente" accept=".pdf,.jpg,.jpeg,.png" required>
-                        </div>
-                        <div class="form-group">
-                            <label data-section="form" data-value="dni-dorso">Foto DNI Dorso *</label>
-                            <input type="file" name="dniDorso" accept=".pdf,.jpg,.jpeg,.png" required>
-                        </div>
-                        <div class="form-group form-group-full">
                             <label data-section="form" data-value="tipo-licencia">Tipo de Licencia de Conducir *</label>
                             <select name="tipoLicencia" required>
-                                <option value="" data-section="form" data-value="seleccione">Seleccione una opción</option>
+                                <option value="">Seleccione una opción</option>
                                 <option value="B.1">B.1</option>
                                 <option value="B.2">B.2</option>
                                 <option value="C.1">C.1</option>
@@ -492,6 +475,15 @@
                                 <option value="G">G</option>
                             </select>
                         </div>
+
+                    </div>
+                </section>
+
+                <!-- ====== 8. DOCUMENTACIÓN ====== -->
+                <section class="form-section">
+                    <h2 class="section-title" data-section="form" data-value="documentacion-titulo">Documentación</h2>
+                    <p class="file-info" data-section="form" data-value="formatos-aceptados">Formatos aceptados: PDF, JPG, PNG (máx. 5MB por archivo)</p>
+                    <div class="form-grid">
                         <div class="form-group">
                             <label data-section="form" data-value="licencia-frente">Foto Licencia Frente *</label>
                             <input type="file" name="licenciaFrente" accept=".pdf,.jpg,.jpeg,.png" required>
@@ -499,6 +491,14 @@
                         <div class="form-group">
                             <label data-section="form" data-value="licencia-dorso">Foto Licencia Dorso *</label>
                             <input type="file" name="licenciaDorso" accept=".pdf,.jpg,.jpeg,.png" required>
+                        </div><br>
+                        <div class="form-group">
+                            <label data-section="form" data-value="dni-frente">Foto DNI Frente *</label>
+                            <input type="file" name="dniFrente" accept=".pdf,.jpg,.jpeg,.png" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-section="form" data-value="dni-dorso">Foto DNI Dorso *</label>
+                            <input type="file" name="dniDorso" accept=".pdf,.jpg,.jpeg,.png" required>
                         </div>
                         <div class="form-group form-group-full">
                             <label data-section="form" data-value="cv">Curriculum Vitae (CV) *</label>
@@ -507,18 +507,15 @@
                     </div>
                 </section>
 
-                <!-- BOTONES -->
+                <!-- ====== BOTÓN ENVIAR ====== -->
                 <div class="form-actions">
                     <button type="submit" class="btn-submit" id="btn-enviar">
-                        <span data-section="form" data-value="btn-enviar" style="color: #ffffff; font-weight: bold;">Enviar Postulación</span>
+                        <span data-section="form" data-value="btn-enviar" style="color:#ffffff; font-weight:bold;">Enviar Postulación</span>
                     </button>
-                    <!-- <button type="button" class="btn-clear" onclick="location.reload()"><b><a href="index.html" style="color: white;" data-section="about" data-value="btn-volver-inicio">volver a inicio</a></b>
-                    </button> -->
                 </div>
+
             </form>
         </div>
-
-        <!-- END FORMULARIO REACT -->
 
                 </div>
                 <!-- Boton volver a inicio -->
