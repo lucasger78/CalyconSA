@@ -15,16 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('seccion-profesional').style.display = esOperario ? 'none'  : 'block';
       document.getElementById('grupo-profesion').style.display     = esOperario ? 'block' : 'none';
       document.getElementById('grupo-titulo').style.display        = esOperario ? 'none'  : 'block';
-      var inputTitulo    = document.querySelector('input[name="tituloProfesional"]');
-      var inputProfesion = document.querySelector('input[name="profesion"]');
       if (esOperario) {
-        inputTitulo.value    = '';
-        inputTitulo.required = false;
-        inputProfesion.required = true;
+        document.querySelector('input[name="tituloProfesional"]').value = '';
       } else {
-        inputProfesion.value    = '';
-        inputProfesion.required = false;
-        inputTitulo.required    = true;
+        document.querySelector('input[name="profesion"]').value = '';
         var selectOficio = document.querySelector('select[name="oficioPrincipal"]');
         if (selectOficio) selectOficio.value = '';
       }
