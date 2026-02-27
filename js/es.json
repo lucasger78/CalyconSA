@@ -245,7 +245,7 @@
       "formatos-aceptados": "Formatos aceptados: PDF, JPG, PNG (máx. 5MB por archivo)",
       "dni-frente": "Foto DNI Frente *",
       "dni-dorso": "Foto DNI Dorso *",
-      "tipo-licencia": "Tipo de Licencia",
+      "tipo-licencia": "Tipo de Licencia *",
       "licencia-frente": "Foto Licencia Frente *",
       "licencia-dorso": "Foto Licencia Dorso *",
       "cv": "Curriculum Vitae (CV) *",

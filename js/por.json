@@ -239,7 +239,7 @@
     "formatos-aceptados": "Formatos aceitos: PDF, JPG, PNG (máx. 5MB por arquivo)",
     "dni-frente": "RG/DNI Frente *",
     "dni-dorso": "RG/DNI Verso *",
-    "tipo-licencia": "Tipo de Carteira de Motorista",
+    "tipo-licencia": "Tipo de Carteira de Motorista *",
     "licencia-frente": "Carteira de Habilitação Frente *",
     "licencia-dorso": "Carteira de Habilitação Verso *",
     "cv": "Currículo (CV) *",

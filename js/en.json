@@ -240,7 +240,7 @@
     "formatos-aceptados": "Accepted formats: PDF, JPG, PNG (max. 5MB per file)",
     "dni-frente": "ID Card Front *",
     "dni-dorso": "ID Card Back *",
-    "tipo-licencia": "Type of Driving Licence",
+    "tipo-licencia": "Type of Driving Licence *",
     "licencia-frente": "Driver's License Front *",
     "licencia-dorso": "Driver's License Back *",
     "cv": "Resume (CV) *",
